@@ -1,11 +1,10 @@
-/* Reset y configuración base */
 
-/* --- Botón hamburguesa --- */
+/* --- Menú hamburguesa (si lo usás) --- */
 .menu-toggle {
   position: fixed;
   top: 20px;
   left: 20px;
-  background: rgba(14, 165, 233, 0.7); /* 👈 transparente */
+  background: rgba(14, 165, 233, 0.7);
   color: white;
   border: none;
   font-size: 24px;
@@ -13,28 +12,28 @@
   border-radius: 6px;
   cursor: pointer;
   z-index: 300;
-  display: none; /* oculto por defecto */
+  display: none;
   transition: background 0.3s;
 }
 
 .menu-toggle:hover {
-  background: rgba(14, 165, 233, 0.9); /* 👈 menos transparente al pasar */
+  background: rgba(14, 165, 233, 0.9);
 }
 
 .side-menu {
   position: fixed;
   top: 0;
-  left: -250px; /* oculto inicialmente */
+  left: -250px;
   width: 250px;
-  max-width: 80%; /* 👈 evita romper layout en pantallas chicas */
+  max-width: 80%;
   height: 100%;
   background: #111827;
   color: white;
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 250;
-  overflow-y: auto;   /* 👈 permite scroll vertical */
-  -webkit-overflow-scrolling: touch; /* 👈 suaviza scroll en móviles */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .side-menu ul {
@@ -405,6 +404,15 @@ strong {
   background-size: cover;
 }
 
+.imagen1{
+  width: 500px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+
 .logos{
   width: auto;
   height: 30px;
@@ -514,4 +522,12 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.imagen3{
+  width: 400px;
+  height: 450px;
+  display: block;
+  margin: 0 auto;
+  
 }

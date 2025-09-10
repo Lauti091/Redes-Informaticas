@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo OSI - Guía Completa</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <script defer src="js/main2.js"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="gradient-bg">
+        <div class="container">
+            <h1 class="header-title">Modelo OSI</h1>
+            <p class="header-subtitle">
+                Comprende las 7 capas del modelo de referencia para la interconexión de sistemas abiertos
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="container">
+            <div class="nav-content">
+                <button onclick="showSection('overview')" class="nav-btn active">
+                    Resumen
+                </button>
+                <button onclick="showSection('layers')" class="nav-btn">
+                    Capas
+                </button>
+                <button onclick="showSection('examples')" class="nav-btn">
+                    Ejemplos
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <!-- Overview Section -->
+        <section id="overview" class="section-content">
+            <div class="card">
+                <h2 class="section-title">¿Qué es el Modelo OSI?</h2>
+                <div class="grid-2">
+                    <div>
+                        <p class="text-content">
+                            El modelo OSI (Open Systems Interconnection) es un marco conceptual que estandariza las funciones de un sistema de comunicación en siete capas abstractas.
+                        </p>
+                        <p class="text-content">
+                            Fue desarrollado por la Organización Internacional de Normalización (ISO) en 1984 para facilitar la comunicación entre diferentes sistemas informáticos.
+                        </p>
+                        <div class="info-box">
+                            <h3 class="info-title">Beneficios del Modelo OSI:</h3>
+                            <ul class="info-list">
+                                <li>• Estandarización de protocolos</li>
+                                <li>• Facilita el troubleshooting</li>
+                                <li>• Modularidad en el diseño</li>
+                                <li>• Interoperabilidad entre sistemas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="osi-structure">
+                        <h3 class="osi-title">Estructura del Modelo OSI</h3>
+                        <div class="osi-layers">
+                            <div class="osi-layer layer-7">7. Aplicación</div>
+                            <div class="osi-layer layer-6">6. Presentación</div>
+                            <div class="osi-layer layer-5">5. Sesión</div>
+                            <div class="osi-layer layer-4">4. Transporte</div>
+                            <div class="osi-layer layer-3">3. Red</div>
+                            <div class="osi-layer layer-2">2. Enlace de Datos</div>
+                            <div class="osi-layer layer-1">1. Física</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layers Section -->
+        <section id="layers" class="section-content hidden">
+            <h2 class="section-title section-title-center">Las 7 Capas del Modelo OSI</h2>
+            
+            <!-- Layer 7 - Application -->
+            <div class="layer-card border-red" onclick="toggleLayer(this)">
+                <div class="layer-header">
+                    <div class="layer-info">
+                        <div class="layer-number layer-7">7</div>
+                        <div>
+                            <h3 class="layer-title">Capa de Aplicación</h3>
+                            <p class="layer-subtitle">Interfaz entre el usuario y la red</p>
+                        </div>
+                    </div>
+                    <div class="layer-toggle" style="color: #1e40af;">+</div>
+                </div>
+                <div class="layer-details hidden">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="detail-title">Función:</h4>
+                            <p class="text-content">Proporciona servicios de red directamente a las aplicaciones del usuario final.</p>
+                            <h4 class="detail-title">Protocolos:</h4>
+                            <div class="protocol-tags">
+                                <span class="protocol-tag tag-red">HTTP/HTTPS</span>
+                                <span class="protocol-tag tag-red">FTP</span>
+                                <span class="protocol-tag tag-red">SMTP</span>
+                                <span class="protocol-tag tag-red">DNS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="detail-title">Ejemplos:</h4>
+                            <ul class="feature-list">
+                                <li>• Navegadores web</li>
+                                <li>• Clientes de email</li>
+                                <li>• Aplicaciones de chat</li>
+                                <li>• Transferencia de archivos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 6 - Presentation -->
+            <div class="layer-card border-orange" onclick="toggleLayer(this)">
+                <div class="layer-header">
+                    <div class="layer-info">
+                        <div class="layer-number layer-6">6</div>
+                        <div>
+                            <h3 class="layer-title">Capa de Presentación</h3>
+                            <p class="layer-subtitle">Traducción, cifrado y compresión</p>
+                        </div>
+                    </div>
+                    <div class="layer-toggle" style="color: #1e40af;">+</div>
+                </div>
+                <div class="layer-details hidden">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="detail-title">Función:</h4>
+                            <p class="text-content">Traduce, cifra y comprime los datos para la capa de aplicación.</p>
+                            <h4 class="detail-title">Servicios:</h4>
+                            <div class="protocol-tags">
+                                <span class="protocol-tag tag-orange">Cifrado</span>
+                                <span class="protocol-tag tag-orange">Compresión</span>
+                                <span class="protocol-tag tag-orange">Traducción</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="detail-title">Ejemplos:</h4>
+                            <ul class="feature-list">
+                                <li>• SSL/TLS</li>
+                                <li>• JPEG, GIF, PNG</li>
+                                <li>• MPEG, MP3</li>
+                                <li>• ASCII, EBCDIC</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 5 - Session -->
+            <div class="layer-card border-yellow" onclick="toggleLayer(this)">
+                <div class="layer-header">
+                    <div class="layer-info">
+                        <div class="layer-number layer-5">5</div>
+                        <div>
+                            <h3 class="layer-title">Capa de Sesión</h3>
+                            <p class="layer-subtitle">Gestión de sesiones y diálogos</p>
+                        </div>
+                    </div>
+                    <div class="layer-toggle" style="color: #1e40af;">+</div>
+                </div>
+                <div class="layer-details hidden">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="detail-title">Función:</h4>
+                            <p class="text-content">Establece, gestiona y termina las sesiones entre aplicaciones.</p>
+                            <h4 class="detail-title">Protocolos:</h4>
+                            <div class="protocol-tags">
+                                <span class="protocol-tag tag-yellow">NetBIOS</span>
+                                <span class="protocol-tag tag-yellow">RPC</span>
+                                <span class="protocol-tag tag-yellow">SQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="detail-title">Funciones:</h4>
+                            <ul class="feature-list">
+                                <li>• Control de diálogo</li>
+                                <li>• Sincronización</li>
+                                <li>• Puntos de control</li>
+                                <li>• Recuperación de sesión</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 4 - Transport -->
+            <div class="layer-card border-green" onclick="toggleLayer(this)">
+                <div class="layer-header">
+                    <div class="layer-info">
+                        <div class="layer-number layer-4">4</div>
+                        <div>
+                            <h3 class="layer-title">Capa de Transporte</h3>
+                            <p class="layer-subtitle">Entrega confiable de datos</p>
+                        </div>
+                    </div>
+                    <div class="layer-toggle" style="color: #ffffff;">+</div>
+                </div>
+                <div class="layer-details hidden">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="detail-title">Función:</h4>
+                            <p class="text-content">Garantiza la entrega completa y correcta de los datos.</p>
+                            <h4 class="detail-title">Protocolos:</h4>
+                            <div class="protocol-tags">
+                                <span class="protocol-tag tag-green">TCP</span>
+                                <span class="protocol-tag tag-green">UDP</span>
+                                <span class="protocol-tag tag-green">SPX</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="detail-title">Servicios:</h4>
+                            <ul class="feature-list">
+                                <li>• Control de flujo</li>
+                                <li>• Control de errores</li>
+                                <li>• Segmentación</li>
+                                <li>• Multiplexación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 3 - Network -->
+            <div class="layer-card border-blue" onclick="toggleLayer(this)">
+                <div class="layer-header">
+                    <div class="layer-info">
+                        <div class="layer-number layer-3">3</div>
+                        <div>
+                            <h3 class="layer-title">Capa de Red</h3>
+                            <p class="layer-subtitle">Enrutamiento y direccionamiento</p>
+                        </div>
+                    </div>
+                    <div class="layer-toggle" style="color: #ffffff;">+</div>
+                </div>
+                <div class="layer-details hidden">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="detail-title">Función:</h4>
+                            <p class="text-content">Determina la mejor ruta para enviar datos a través de la red.</p>
+                            <h4 class="detail-title">Protocolos:</h4>
+                            <div class="protocol-tags">
+                                <span class="protocol-tag tag-blue">IP</span>
+                                <span class="protocol-tag tag-blue">ICMP</span>
+                                <span class="protocol-tag tag-blue">OSPF</span>
+                                <span class="protocol-tag tag-blue">BGP</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="detail-title">Dispositivos:</h4>
+                            <ul class="feature-list">
+                                <li>• Routers</li>
+                                <li>• Switches de capa 3</li>
+                                <li>• Gateways</li>
+                                <li>• Firewalls</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 2 - Data Link -->
+            <div class="layer-card border-indigo" onclick="toggleLayer(this)">
+                <div class="layer-header">
+                    <div class="layer-info">
+                        <div class="layer-number layer-2">2</div>
+                        <div>
+                            <h3 class="layer-title">Capa de Enlace de Datos</h3>
+                            <p class="layer-subtitle">Control de acceso al medio</p>
+                        </div>
+                    </div>
+                    <div class="layer-toggle" style="color: #ffffff;">+</div>
+                </div>
+                <div class="layer-details hidden">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="detail-title">Función:</h4>
+                            <p class="text-content">Proporciona transferencia de datos libre de errores entre nodos adyacentes.</p>
+                            <h4 class="detail-title">Protocolos:</h4>
+                            <div class="protocol-tags">
+                                <span class="protocol-tag tag-indigo">Ethernet</span>
+                                <span class="protocol-tag tag-indigo">Wi-Fi</span>
+                                <span class="protocol-tag tag-indigo">PPP</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="detail-title">Dispositivos:</h4>
+                            <ul class="feature-list">
+                                <li>• Switches</li>
+                                <li>• Bridges</li>
+                                <li>• Access Points</li>
+                                <li>• Tarjetas de red</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 1 - Physical -->
+            <div class="layer-card border-purple" onclick="toggleLayer(this)">
+                <div class="layer-header">
+                    <div class="layer-info">
+                        <div class="layer-number layer-1">1</div>
+                        <div>
+                            <h3 class="layer-title">Capa Física</h3>
+                            <p class="layer-subtitle">Transmisión de bits</p>
+                        </div>
+                    </div>
+                    <div class="layer-toggle" style="color: #ffffff;">+</div>
+                </div>
+                <div class="layer-details hidden">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="detail-title">Función:</h4>
+                            <p class="text-content">Define las características eléctricas, mecánicas y funcionales para transmitir bits.</p>
+                            <h4 class="detail-title">Estándares:</h4>
+                            <div class="protocol-tags">
+                                <span class="protocol-tag tag-purple">IEEE 802.3</span>
+                                <span class="protocol-tag tag-purple">RS-232</span>
+                                <span class="protocol-tag tag-purple">USB</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="detail-title">Componentes:</h4>
+                            <ul class="feature-list">
+                                <li>• Cables de red</li>
+                                <li>• Hubs</li>
+                                <li>• Repetidores</li>
+                                <li>• Conectores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="examples" class="section-content hidden">
+            <h2 class="section-title section-title-center">Ejemplos Prácticos</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="layer-title" style="margin-bottom: 1rem;">Navegación Web (HTTP)</h3>
+                    <div>
+                        <div class="example-step step-red">
+                            <div class="step-number layer-7">7</div>
+                            <span class="step-text">Navegador web (Chrome, Firefox)</span>
+                        </div>
+                        <div class="example-step step-orange">
+                            <div class="step-number layer-6">6</div>
+                            <span class="step-text">Cifrado SSL/TLS, compresión GZIP</span>
+                        </div>
+                        <div class="example-step step-yellow">
+                            <div class="step-number layer-5">5</div>
+                            <span class="step-text">Sesión HTTP persistente</span>
+                        </div>
+                        <div class="example-step step-green">
+                            <div class="step-number layer-4">4</div>
+                            <span class="step-text">TCP puerto 80/443</span>
+                        </div>
+                        <div class="example-step step-blue">
+                            <div class="step-number layer-3">3</div>
+                            <span class="step-text">Direcciones IP, enrutamiento</span>
+                        </div>
+                        <div class="example-step step-indigo">
+                            <div class="step-number layer-2">2</div>
+                            <span class="step-text">Ethernet, Wi-Fi</span>
+                        </div>
+                        <div class="example-step step-purple">
+                            <div class="step-number layer-1">1</div>
+                            <span class="step-text">Cable UTP, fibra óptica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="layer-title" style="margin-bottom: 1rem;">Envío de Email (SMTP)</h3>
+                    <div>
+                        <div class="example-step step-red">
+                            <div class="step-number layer-7">7</div>
+                            <span class="step-text">Cliente de email (Outlook, Gmail)</span>
+                        </div>
+                        <div class="example-step step-orange">
+                            <div class="step-number layer-6">6</div>
+                            <span class="step-text">Codificación MIME, cifrado</span>
+                        </div>
+                        <div class="example-step step-yellow">
+                            <div class="step-number layer-5">5</div>
+                            <span class="step-text">Sesión SMTP autenticada</span>
+                        </div>
+                        <div class="example-step step-green">
+                            <div class="step-number layer-4">4</div>
+                            <span class="step-text">TCP puerto 25/587</span>
+                        </div>
+                        <div class="example-step step-blue">
+                            <div class="step-number layer-3">3</div>
+                            <span class="step-text">Enrutamiento IP al servidor</span>
+                        </div>
+                        <div class="example-step step-indigo">
+                            <div class="step-number layer-2">2</div>
+                            <span class="step-text">Frame Ethernet</span>
+                        </div>
+                        <div class="example-step step-purple">
+                            <div class="step-number layer-1">1</div>
+                            <span class="step-text">Señales eléctricas/ópticas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Quiz -->
+            <div class="card">
+                <h3 class="section-title" style="text-align: center;">Quiz Interactivo</h3>
+                <div id="quiz-container">
+                    <div class="quiz-question">
+                        <p class="quiz-title">¿En qué capa del modelo OSI opera un router?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="checkAnswer(this, false)">
+                                Capa 2 - Enlace de Datos
+                            </button>
+                            <button class="quiz-option" onclick="checkAnswer(this, true)">
+                                Capa 3 - Red
+                            </button>
+                            <button class="quiz-option" onclick="checkAnswer(this, false)">
+                                Capa 4 - Transporte
+                            </button>
+                            <button class="quiz-option" onclick="checkAnswer(this, false)">
+                                Capa 7 - Aplicación
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        
+        <div class="container">
+            <p class="footer-text">© 2024 Modelo OSI - Guía Educativa</p>
+            <p class="footer-subtext">Aprende las 7 capas del modelo de referencia OSI</p>
+        </div>
+    </footer>
+
+</body>
+</html>
