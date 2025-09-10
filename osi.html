@@ -16,77 +16,73 @@
     </div>
   </header>
  
-  <!-- Botón Hamburguesa (solo en móvil) -->
-  <button id="menuToggle" class="menu-toggle">☰</button>
+ <!-- Botón Hamburguesa (solo en móvil) -->
+<button id="menuToggle" class="menu-toggle">☰</button>
 
-  <!-- Menú lateral (solo en móvil) -->
-  <nav id="sideMenu" class="side-menu">
-   <ul class="nav-list">
-          <li><a href="index.html">Inicio</a></li>
-          <li class="dropdown">
-            <a href="#">Redes ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="osi.html">Modelo OSI</a></li>
-              <li><a href="protocolos.html">Protocolos</a></li>
-              <li><a href="topologias.html">Topologías</a></li>
-            </ul>
-          </li>
+<!-- Menú lateral (móvil) -->
+<nav id="sideMenu" class="side-menu">
+  <ul class="nav-list">
+    <li class="dropdown-mobile">
+      <a href="#" class="dropdown-toggle">Conceptos Básicos ▾</a>
+      <ul class="dropdown-menu-mobile">
+        <li><a href="index.html">Introducción</a></li>
+        <li><a href="#dispositivos">Dispositivos</a></li>
+        <li><a href="#topologias">Topologías</a></li>
+      </ul>
+    </li>
 
-          <li class="dropdown">
-            <a href="#">Infraestructura ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="dispositivos.html">Dispositivos</a></li>
-              <li><a href="sistemas.html">Sistemas Operativos</a></li>
-            </ul>
-          </li>
+    <li class="dropdown-mobile">
+      <a href="#" class="dropdown-toggle">Protocolos ▾</a>
+      <ul class="dropdown-menu-mobile">
+        <li><a href="#protocolos">Protocolos</a></li>
+        <li><a href="#direccionamiento">Direccionamiento IP</a></li>
+        <li><a href="#seguridad">Seguridad</a></li>
+      </ul>
+    </li>
 
-          <li class="dropdown">
-            <a href="#">Gestión ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="seguridad.html">Seguridad</a></li>
-              <li><a href="administracion.html">Administración</a></li>
-            </ul>
-          </li>
+    <li class="dropdown-mobile">
+      <a href="#" class="dropdown-toggle">Administración ▾</a>
+      <ul class="dropdown-menu-mobile">
+        <li><a href="#administracion">Administración</a></li>
+        <li><a href="osi.html">Modelo OSI</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-          <li><a href="contacto.html">Contacto</a></li>
+<!-- Menú escritorio -->
+<nav class="nav">
+  <div class="container">
+    <ul class="nav-list">
+      <li class="dropdown">
+        <a href="#">Conceptos Básicos ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Introducción</a></li>
+          <li><a href="#dispositivos">Dispositivos</a></li>
+          <li><a href="#topologias">Topologías</a></li>
         </ul>
-    </div>
-    </nav>
-  <!-- Menú de escritorio -->
-  <nav class="nav">
-    <div class="container">
-       <ul class="nav-list">
-          <li><a href="index.html">Inicio</a></li>
+      </li>
 
-          <li class="dropdown">
-            <a href="#">Redes ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="osi.html">Modelo OSI</a></li>
-              <li><a href="protocolos.html">Protocolos</a></li>
-              <li><a href="topologias.html">Topologías</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#">Infraestructura ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="dispositivos.html">Dispositivos</a></li>
-              <li><a href="sistemas.html">Sistemas Operativos</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#">Gestión ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="seguridad.html">Seguridad</a></li>
-              <li><a href="administracion.html">Administración</a></li>
-            </ul>
-          </li>
-
-          <li><a href="contacto.html">Contacto</a></li>
+      <li class="dropdown">
+        <a href="#">Protocolos ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#protocolos">Protocolos</a></li>
+          <li><a href="#direccionamiento">Direccionamiento IP</a></li>
+          <li><a href="#seguridad">Seguridad</a></li>
         </ul>
-    </div>
-  </nav>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Administración ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#administracion">Administración</a></li>
+          <li><a href="osi.html">Modelo OSI</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 
   <main class="main">
     <div class="container">
