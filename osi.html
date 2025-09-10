@@ -16,59 +16,77 @@
     </div>
   </header>
 
-<!-- Menú lateral (solo en móvil) -->
-<nav id="sideMenu" class="side-menu">
-    <ul class="nav-list">
-        <li><a href="#introduccion">Introducción</a></li>
-        <li><a href="#dispositivos">Dispositivos</a></li>
-        <li><a href="#sistemas">Sistemas Operativos</a></li>
-        <li><a href="#protocolos">Protocolos</a></li>
-        <li><a href="#direccionamiento">Direccionamiento IP</a></li>
-        <li><a href="#seguridad">Seguridad</a></li>
-        <li><a href="#topologias">Topologías</a></li>
-        <li><a href="#administracion">Administración</a></li>
-        <li><a href="osi.html">Modelo OSI</a></li>
-        
+  <!-- Botón Hamburguesa (solo en móvil) -->
+  <button id="menuToggle" class="menu-toggle">☰</button>
 
-    </ul>
-</nav>
+  <!-- Menú lateral (solo en móvil) -->
+  <nav id="sideMenu" class="side-menu">
+   <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Redes ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="osi.html">Modelo OSI</a></li>
+              <li><a href="protocolos.html">Protocolos</a></li>
+              <li><a href="topologias.html">Topologías</a></li>
+            </ul>
+          </li>
 
- <nav class="nav">
+          <li class="dropdown">
+            <a href="#">Infraestructura ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="dispositivos.html">Dispositivos</a></li>
+              <li><a href="sistemas.html">Sistemas Operativos</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Gestión ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="seguridad.html">Seguridad</a></li>
+              <li><a href="administracion.html">Administración</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+    </nav>
+  <!-- Menú de escritorio -->
+  <nav class="nav">
     <div class="container">
        <ul class="nav-list">
-  <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
 
-  <li class="dropdown">
-    <a href="#">Redes ▾</a>
-    <ul class="dropdown-menu">
-      <li><a href="osi.html">Modelo OSI</a></li>
-      <li><a href="protocolos.html">Protocolos</a></li>
-      <li><a href="topologias.html">Topologías</a></li>
-    </ul>
-  </li>
+          <li class="dropdown">
+            <a href="#">Redes ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="osi.html">Modelo OSI</a></li>
+              <li><a href="protocolos.html">Protocolos</a></li>
+              <li><a href="topologias.html">Topologías</a></li>
+            </ul>
+          </li>
 
-  <li class="dropdown">
-    <a href="#">Infraestructura ▾</a>
-    <ul class="dropdown-menu">
-      <li><a href="dispositivos.html">Dispositivos</a></li>
-      <li><a href="sistemas.html">Sistemas Operativos</a></li>
-    </ul>
-  </li>
+          <li class="dropdown">
+            <a href="#">Infraestructura ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="dispositivos.html">Dispositivos</a></li>
+              <li><a href="sistemas.html">Sistemas Operativos</a></li>
+            </ul>
+          </li>
 
-  <li class="dropdown">
-    <a href="#">Gestión ▾</a>
-    <ul class="dropdown-menu">
-      <li><a href="seguridad.html">Seguridad</a></li>
-      <li><a href="administracion.html">Administración</a></li>
-    </ul>
-  </li>
+          <li class="dropdown">
+            <a href="#">Gestión ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="seguridad.html">Seguridad</a></li>
+              <li><a href="administracion.html">Administración</a></li>
+            </ul>
+          </li>
 
-  <li><a href="contacto.html">Contacto</a></li>
-</ul>
-
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </div>
-</nav>
-
+  </nav>
 
   <main class="main">
     <div class="container">
@@ -141,5 +159,6 @@
     </div>
   </footer>
 <button id="btnSubir" title="Volver arriba">⬆</button>
+
 </body>
 </html>
