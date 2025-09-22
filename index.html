@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso completo sobre redes de datos y computadoras. Aprende sobre tipos de redes, modelo OSI, segmentación, ancho de banda y más.">
+    <meta name="keywords" content="redes de datos, networking, modelo OSI, TCP/IP, segmentación, ancho de banda">
+    <meta name="author" content="Profesor Lautaro Aragón">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Redes de Datos - Curso Completo">
+    <meta property="og:description" content="Curso completo sobre redes de datos y computadoras">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Redes de Datos - Curso Completo">
+    <meta property="twitter:description" content="Curso completo sobre redes de datos y computadoras">
+    
+    <title>Redes de Datos - Curso Completo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+
+    
+<header class="header" role="banner">
+  <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html" class="logo-text">Redes de Datos</a>
+        </div>
+
+        <!-- Menú principal -->
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" class="nav-link">Inicio</a></li>
+          <li role="none"><a href="resumen.html" role="menuitem" class="nav-link">Resumen</a></li>
+          <li role="none"><a href="tipos-de-redes.html" role="menuitem" class="nav-link">Tipos de Redes</a></li>
+          <li role="none"><a href="medios-de-transmision.html" role="menuitem" class="nav-link" aria-current="page">Medios de Transmisión</a></li>
+          <li role="none"><a href="segmentacion.html" role="menuitem" class="nav-link">Segmentación</a></li>
+          <li role="none"><a href="ancho-de-banda.html" role="menuitem" class="nav-link">Ancho de Banda</a></li>
+          <li role="none"><a href="modelo-osi.html" role="menuitem" class="nav-link">Modelo OSI</a></li>
+        </ul>
+
+        <!-- Botón hamburguesa -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Overlay para cubrir el contenido al abrir el menú -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+</header>
+
+
+
+
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title" class="hero-title">Redes de Datos</h1>
+                <p class="hero-subtitle">Curso completo sobre redes de computadoras y comunicaciones</p>
+                <button class="cta-button" onclick="scrollToSection('introduccion')" aria-describedby="cta-description">
+                    Comenzar Curso
+                </button>
+                <p id="cta-description" class="sr-only">Desplazarse a la sección de introducción</p>
+            </div>
+            <div class="hero-decoration" aria-hidden="true"></div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduccion" class="section" aria-labelledby="intro-title">
+            <div class="container">
+                <h2 id="intro-title" class="section-title">Introducción</h2>
+                <div class="content-card">
+                    <div class="card-content">
+                        <p>Las redes de datos se desarrollaron como consecuencia de aplicaciones comerciales. Por aquel entonces, no estaban conectados entre sí los microcomputadores y no había manera eficaz de compartir datos, por lo cual no era económico el desarrollo de la actividad empresarial.</p>
+                        
+                        <p>Las empresas se dieron cuenta de que la tecnología de networking aumenta la productividad y ahorra gastos.</p>
+                        
+                        <p>A principios de la década del 1980, networking se expandió; a mediados de esta década las tecnologías de redes habían emergido y creado implementaciones de hardware y software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Definition Section -->
+        <section id="definicion" class="section section-alt" aria-labelledby="def-title">
+            <div class="container">
+                <h2 id="def-title" class="section-title">¿Qué es una red de datos?</h2>
+                <div class="content-card">
+                    <div class="card-content">
+                        <p>Una red de datos es un conjunto de equipos informáticos, de comunicaciones, software y medios de transporte que permiten el envío y recepción de información utilizando diversas tecnologías.</p>
+                        
+                        <p>Los dispositivos que hacen uso de una red se conectan entre sí mediante el uso de dispositivos físicos (nodos) que envían y reciben señales en forma de impulsos eléctricos, ondas de radio y cualquier otro método con el fin de compartir información, recursos y ofrecer servicios.</p>
+                        
+                        <div class="network-diagram" role="img" aria-label="Diagrama de red mostrando conexiones entre dispositivos">
+                            <div class="device terminal">
+                                <div class="device-icon" aria-hidden="true">💻</div>
+                                <span class="device-label">Terminal</span>
+                            </div>
+                            <div class="connection" aria-hidden="true"></div>
+                            <div class="device switch">
+                                <div class="device-icon" aria-hidden="true">🔀</div>
+                                <span class="device-label">Switch</span>
+                            </div>
+                            <div class="connection" aria-hidden="true"></div>
+                            <div class="device server">
+                                <div class="device-icon" aria-hidden="true">🖥️</div>
+                                <span class="device-label">Servidor</span>
+                            </div>
+                            <div class="connection vertical" aria-hidden="true"></div>
+                            <div class="device printer">
+                                <div class="device-icon" aria-hidden="true">🖨️</div>
+                                <span class="device-label">Impresora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Communication Elements Section -->
+        <section id="comunicacion" class="section" aria-labelledby="comm-title">
+            <div class="container">
+                <h2 id="comm-title" class="section-title">Elementos de la Comunicación</h2>
+                <div class="content-card">
+                    <div class="card-content">
+                        <p>Todo proceso comunicacional (escrito, hablado, informático, etc.), en general, se describe con los siguientes elementos:</p>
+                        
+                        <div class="communication-elements">
+                            <div class="element">
+                                <div class="element-icon" aria-hidden="true">📤</div>
+                                <h3 class="element-title">Emisor</h3>
+                                <p class="element-description">Constructor del mensaje</p>
+                            </div>
+                            <div class="element">
+                                <div class="element-icon" aria-hidden="true">💬</div>
+                                <h3 class="element-title">Mensaje</h3>
+                                <p class="element-description">Información que debe transportarse</p>
+                            </div>
+                            <div class="element">
+                                <div class="element-icon" aria-hidden="true">📋</div>
+                                <h3 class="element-title">Protocolo</h3>
+                                <p class="element-description">Estructura y codificación del mensaje</p>
+                            </div>
+                            <div class="element">
+                                <div class="element-icon" aria-hidden="true">🌐</div>
+                                <h3 class="element-title">Medio</h3>
+                                <p class="element-description">Por donde se transporta el mensaje</p>
+                            </div>
+                            <div class="element">
+                                <div class="element-icon" aria-hidden="true">📥</div>
+                                <h3 class="element-title">Receptor</h3>
+                                <p class="element-description">Quien recibe y decodifica el mensaje</p>
+                            </div>
+                        </div>
+
+                        <div class="objectives">
+                            <h3>Finalidades de las redes de datos:</h3>
+                            <ul class="objectives-list">
+                                <li>Compartir recursos e información a distancia</li>
+                                <li>Asegurar la confiabilidad y disponibilidad de la información</li>
+                                <li>Acelerar la velocidad de transmisión de datos</li>
+                                <li>Aumentar la eficiencia y reducir los costos</li>
+                            </ul>
+                            <div class="example-box">
+                                <p><strong>Ejemplo:</strong> Internet es una gran red de millones de ordenadores ubicados en distintos puntos del planeta interconectados básicamente para compartir información y recursos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Human Life and Networks Section -->
+        <section id="vida-humana" class="section section-alt" aria-labelledby="life-title">
+            <div class="container">
+                <h2 id="life-title" class="section-title">La vida humana y la comunicación por redes</h2>
+                <div class="content-card">
+                    <div class="card-content">
+                        <p>Los métodos que utilizamos para compartir ideas e información están en constante cambio y evolución. Mientras la red humana estuvo limitada a conversaciones cara a cara, el avance de los medios ha ampliado el alcance de nuestras comunicaciones.</p>
+                        
+                        <p>Las primeras redes de datos estaban limitadas a intercambiar información basada en caracteres entre sistemas informáticos conectados.</p>
+                        
+                        <p>Las redes actuales evolucionaron para agregarle voz, flujos de video, texto y gráficos, a los diferentes tipos de dispositivos.</p>
+                        
+                        <p>Las formas de comunicación anteriormente individuales y diferentes se unieron en una plataforma común que proporciona acceso a una amplia variedad de métodos de comunicación alternativos y nuevos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Technologies Section -->
+        <section id="tecnologias" class="section" aria-labelledby="tech-title">
+            <div class="container">
+                <h2 id="tech-title" class="section-title">Tecnologías Actuales</h2>
+                <div class="content-card">
+                    <div class="card-content">
+                        <p>Actualmente las tecnologías de consumo, médicas, de investigación, de producción fabril y hasta agrícola hacen uso de algún tipo de tecnología de red:</p>
+                        
+                        <div class="tech-examples">
+                            <div class="tech-item">
+                                <div class="tech-icon" aria-hidden="true">🏠</div>
+                                <h4 class="tech-title">Hogar Inteligente</h4>
+                                <p class="tech-description">Heladeras que avisan por mensajería cuando se agota algún producto</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon" aria-hidden="true">🎤</div>
+                                <h4 class="tech-title">Asistentes Virtuales</h4>
+                                <p class="tech-description">Dispositivos como Alexa que responden a comandos de voz</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon" aria-hidden="true">🏭</div>
+                                <h4 class="tech-title">Industria 4.0</h4>
+                                <p class="tech-description">Monitorización y automatización de procesos industriales</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon" aria-hidden="true">🌾</div>
+                                <h4 class="tech-title">Agricultura</h4>
+                                <p class="tech-description">Mejora del rendimiento de plantaciones mediante IoT</p>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion">
+                            <p><strong>Conclusión:</strong> Internet, el mundo de las aplicaciones web, el cine, un reloj, y lo que podamos imaginar, hoy está de alguna manera, directa o indirectamente, asociado a una tecnología de red. Vivimos en la era de la información, una era donde las tecnologías permiten que esa información viaje cada vez más rápido, más lejos y en mayor cantidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Navigation -->
+        <section class="course-navigation" aria-labelledby="nav-title">
+            <div class="container">
+                <h2 id="nav-title" class="section-title">Continúa el Curso</h2>
+                <div class="course-grid">
+                    <a href="resumen.html" class="course-card">
+                        <div class="course-icon" aria-hidden="true">📋</div>
+                        <h3>Resumen</h3>
+                        <p>Guía completa de todos los conceptos fundamentales</p>
+                        <span class="course-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="tipos-de-redes.html" class="course-card">
+                        <div class="course-icon" aria-hidden="true">🌐</div>
+                        <h3>Tipos de Redes</h3>
+                        <p>Aprende sobre LAN, WAN, MAN y más</p>
+                        <span class="course-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="medios-de-transmision.html" class="course-card">
+                        <div class="course-icon" aria-hidden="true">📡</div>
+                        <h3>Medios de Transmisión</h3>
+                        <p>Cables, fibra óptica y comunicación inalámbrica</p>
+                        <span class="course-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="segmentacion.html" class="course-card">
+                        <div class="course-icon" aria-hidden="true">🔧</div>
+                        <h3>Segmentación</h3>
+                        <p>Subnetting y organización de redes</p>
+                        <span class="course-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="ancho-de-banda.html" class="course-card">
+                        <div class="course-icon" aria-hidden="true">⚡</div>
+                        <h3>Ancho de Banda</h3>
+                        <p>Velocidad y capacidad de transmisión</p>
+                        <span class="course-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="modelo-osi.html" class="course-card">
+                        <div class="course-icon" aria-hidden="true">📚</div>
+                        <h3>Modelo OSI</h3>
+                        <p>Las 7 capas del modelo de referencia</p>
+                        <span class="course-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Redes de Datos</h3>
+                    <p>Curso completo sobre redes de computadoras</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="resumen.html">Resumen</a></li>
+                        <li><a href="tipos-de-redes.html">Tipos de Redes</a></li>
+                        <li><a href="modelo-osi.html">Modelo OSI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>Profesor: Lautaro Aragón</p>
+                    <p>&copy; 2025 - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to top button -->
+        <button id="scrollTop" class="scroll-top" aria-label="Volver al inicio" title="Volver al inicio">
+            <span aria-hidden="true">↑</span>
+        </button>
+    </footer>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-indicator" aria-hidden="true">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

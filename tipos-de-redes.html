@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende sobre los diferentes tipos de redes: LAN, WAN, MAN, PAN y sus características principales.">
+    <meta name="keywords" content="tipos de redes, LAN, WAN, MAN, PAN, redes de computadoras">
+    <title>Tipos de Redes - Redes de Datos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header" role="banner">
+  <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html" class="logo-text">Redes de Datos</a>
+        </div>
+
+        <!-- Añadí id="nav-menu" y class="nav-link" en los <a> -->
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" class="nav-link">Inicio</a></li>
+          <li role="none"><a href="resumen.html" role="menuitem" class="nav-link">Resumen</a></li>
+          <li role="none"><a href="tipos-de-redes.html" role="menuitem" class="nav-link">Tipos de Redes</a></li>
+          <li role="none"><a href="medios-de-transmision.html" role="menuitem" class="nav-link" aria-current="page">Medios de Transmisión</a></li>
+          <li role="none"><a href="segmentacion.html" role="menuitem" class="nav-link">Segmentación</a></li>
+          <li role="none"><a href="ancho-de-banda.html" role="menuitem" class="nav-link">Ancho de Banda</a></li>
+          <li role="none"><a href="modelo-osi.html" role="menuitem" class="nav-link">Modelo OSI</a></li>
+        </ul>
+
+        <!-- Añadí id="hamburger" y las líneas con class="hamburger-line" -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+</header>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero hero-networks">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" >Tipos de Redes</h1>
+                    <p class="hero-subtitle" id="introduccion" class="section-title">Clasificación y características de las redes de computadoras</p>
+                    <div class="hero-actions">
+                         <button class="cta-button" onclick="scrollToSection('introduccion')" aria-describedby="cta-description">
+                            Explorar Tipos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+       <section id="network-types" class="section" aria-labelledby="intro-title">
+  <div class="container">
+    <h2 id="intro-title" class="section-title">Clasificación por Alcance Geográfico</h2>
+
+    <div class="content-card">
+<div class="network-types">
+
+  <!-- LAN -->
+  <div class="network-type">
+    <div class="network-type-header">
+      <div class="network-icon">🏢</div>
+      <h3>LAN - Red de Área Local</h3>
+    </div>
+    <p><strong>Alcance:</strong> Hasta 1 km</p>
+    <p><strong>Ubicación:</strong> Edificios, oficinas, hogares</p>
+    <p><strong>Características:</strong> Alta velocidad, bajo costo, fácil administración</p>
+    <div class="network-examples">
+      <strong>Ejemplos:</strong> Red de oficina, red doméstica, laboratorio de computación
+    </div>
+  </div>
+
+  <!-- MAN -->
+  <div class="network-type">
+    <div class="network-type-header">
+      <div class="network-icon">🏙️</div>
+      <h3>MAN - Red de Área Metropolitana</h3>
+    </div>
+    <p><strong>Alcance:</strong> 1-100 km</p>
+    <p><strong>Ubicación:</strong> Ciudad o área metropolitana</p>
+    <p><strong>Características:</strong> Conecta múltiples LANs, velocidad media-alta</p>
+    <div class="network-examples">
+      <strong>Ejemplos:</strong> Red universitaria, red municipal, cable TV, fibra óptica urbana
+    </div>
+  </div>
+
+  <!-- WAN -->
+  <div class="network-type">
+    <div class="network-type-header">
+      <div class="network-icon">🌍</div>
+      <h3>WAN - Red de Área Amplia</h3>
+    </div>
+    <p><strong>Alcance:</strong> Más de 100 km</p>
+    <p><strong>Ubicación:</strong> Países, continentes</p>
+    <br>
+    <p><strong>Características:</strong> Conecta LANs y MANs, velocidad variable</p>
+    <div class="network-examples">
+      <strong>Ejemplos:</strong> Internet, redes corporativas globales, redes satelitales, VPN, MPLS, SD-WAN
+    </div>
+  </div>
+
+  <!-- CAN -->
+  <div class="network-type">
+    <div class="network-type-header">
+      <div class="network-icon">🏫</div>
+      <h3>CAN - Red de Área de Campus</h3>
+    </div>
+    <p><strong>Alcance:</strong> 1-5 km</p>
+    <br>
+    <p><strong>Ubicación:</strong> Campus universitario o industrial</p>
+    <p><strong>Características:</strong> Conecta varias LANs dentro de un campus, alta velocidad</p>
+    <br>
+    <div class="network-examples">
+      <strong>Ejemplos:</strong> Campus universitario, complejo industrial brindando conectividad interna
+    </div>
+  </div>
+
+  <!-- VLAN -->
+  <div class="network-type">
+    <div class="network-type-header">
+      <div class="network-icon">🔗</div>
+      <h3>VLAN - Red de Área Local Virtual</h3>
+    </div>
+    <p><strong>Alcance:</strong> Variable, dentro de una LAN</p>
+    <p><strong>Ubicación:</strong> Redes corporativas y empresariales</p>
+    <p><strong>Características:</strong> Segmenta la red lógica sin hardware adicional, mejora seguridad y rendimiento</p>
+    <div class="network-examples">
+      <strong>Ejemplos:</strong> Separación de departamentos, redes de invitados en oficinas
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<section class="section section-alt" aria-labelledby="topology-title">
+    <div class="container">
+        <h2 id="topology-title" class="section-title">Topologías de Red</h2>
+        <div class="content-card">
+            <div class="topology-grid">
+
+                <!-- Bus -->
+                <div class="topology-item">
+                    <h3>Topología en Bus</h3>
+                    <div class="topology-diagram bus-topology" role="img" aria-label="Diagrama de topología en bus">
+                        <div class="bus-line"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                    </div>
+                    <div class="topology-pros-cons">
+                        <div class="pros">
+                            <h4>Ventajas:</h4>
+                            <ul>
+                                <li>Fácil instalación</li>
+                                <li>Bajo costo</li>
+                                <li>Requiere menos cable</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Desventajas:</h4>
+                            <ul>
+                                <li>Punto único de falla</li>
+                                <li>Difícil localizar problemas</li>
+                                <li>Rendimiento degrada con más nodos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estrella -->
+                <div class="topology-item">
+                    <h3>Topología en Estrella</h3>
+                    <div class="topology-diagram star-topology" role="img" aria-label="Diagrama de topología en estrella">
+                        <div class="central-hub"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="connection"></div>
+                        <div class="connection"></div>
+                        <div class="connection"></div>
+                        <div class="connection"></div>
+                    </div>
+                    <div class="topology-pros-cons">
+                        <div class="pros">
+                            <h4>Ventajas:</h4>
+                            <ul>
+                                <li>Fácil administración</li>
+                                <li>Falla de un nodo no afecta otros</li>
+                                <li>Fácil detección de problemas</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Desventajas:</h4>
+                            <ul>
+                                <li>Dependencia del hub central</li>
+                                <li>Más cable requerido</li>
+                                <li>Costo del dispositivo central</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anillo -->
+                <div class="topology-item">
+                    <h3>Topología en Anillo</h3>
+                    <div class="topology-diagram ring-topology" role="img" aria-label="Diagrama de topología en anillo">
+                        <div class="ring-path"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                    </div>
+                    <div class="topology-pros-cons">
+                        <div class="pros">
+                            <h4>Ventajas:</h4>
+                            <ul>
+                                <li>No hay colisiones</li>
+                                <li>Rendimiento predecible</li>
+                                <li>Acceso equitativo</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Desventajas:</h4>
+                            <ul>
+                                <li>Falla de un nodo afecta toda la red</li>
+                                <li>Difícil reconfiguración</li>
+                                <li>Latencia variable</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Malla -->
+                <div class="topology-item">
+                    <h3>Topología en Malla</h3>
+                    <div class="topology-diagram mesh-topology" role="img" aria-label="Diagrama de topología en malla">
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="mesh-connection"></div>
+                        <div class="mesh-connection"></div>
+                        <div class="mesh-connection"></div>
+                        <div class="mesh-connection"></div>
+                        <div class="mesh-connection"></div>
+                        <div class="mesh-connection"></div>
+                    </div>
+                    <div class="topology-pros-cons">
+                        <div class="pros">
+                            <h4>Ventajas:</h4>
+                            <ul>
+                                <li>Alta redundancia</li>
+                                <li>Múltiples rutas</li>
+                                <li>Muy confiable</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Desventajas:</h4>
+                            <ul>
+                                <li>Muy costosa</li>
+                                <li>Compleja instalación</li>
+                                <li>Mucho cableado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Árbol -->
+                <div class="topology-item">
+                    <h3>Topología en Árbol</h3>
+                    <div class="topology-diagram tree-topology" role="img" aria-label="Diagrama de topología en árbol">
+                        <div class="root-node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="branch-connection"></div>
+                        <div class="branch-connection"></div>
+                    </div>
+                    <div class="topology-pros-cons">
+                        <div class="pros">
+                            <h4>Ventajas:</h4>
+                            <ul>
+                                <li>Jerarquía clara</li>
+                                <li>Fácil de expandir</li>
+                                <li>Problemas aislables</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Desventajas:</h4>
+                            <ul>
+                                <li>Dependencia de los nodos superiores</li>
+                                <li>Requiere más cableado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Híbrida -->
+                <div class="topology-item">
+                    <h3>Topología Híbrida</h3>
+                    <div class="topology-diagram hybrid-topology" role="img" aria-label="Diagrama de topología híbrida">
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="star-part"></div>
+                        <div class="bus-part"></div>
+                    </div>
+                    <div class="topology-pros-cons">
+                        <div class="pros">
+                            <h4>Ventajas:</h4>
+                            <ul>
+                                <li>Combina lo mejor de varias topologías</li>
+                                <li>Flexible y escalable</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Desventajas:</h4>
+                            <ul>
+                                <li>Costosa</li>
+                                <li>Compleja de implementar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Navigation between pages -->
+        <nav class="page-navigation" aria-label="Navegación entre páginas">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link nav-prev">
+                        <span class="nav-direction">← Anterior</span>
+                        <span class="nav-title">Introducción</span>
+                    </a>
+                    <a href="medios-de-transmision.html" class="nav-link nav-next">
+                        <span class="nav-direction" >Siguiente →</span>
+                        <span class="nav-title">Medios de Transmisión</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 - Profesor: Lautaro Aragón</p>
+                <p>Curso completo sobre redes de computadoras</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Volver arriba" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

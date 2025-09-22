@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso completo sobre redes de datos y computadoras. Aprende sobre tipos de redes, modelo OSI, segmentación, ancho de banda y más.">
+    <meta name="keywords" content="redes de datos, networking, modelo OSI, TCP/IP, segmentación, ancho de banda">
+    <meta name="author" content="Profesor Lautaro Aragón">
+    <link rel="stylesheet" href="css/styles.css">    
+    <title>Redes de Datos - Curso Completo</title>
+
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+
+    
+   
+<header class="header" role="banner">
+  <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html" class="logo-text">Redes de Datos</a>
+        </div>
+
+        <!-- Añadí id="nav-menu" y class="nav-link" en los <a> -->
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" class="nav-link">Inicio</a></li>
+          <li role="none"><a href="resumen.html" role="menuitem" class="nav-link">Resumen</a></li>
+          <li role="none"><a href="tipos-de-redes.html" role="menuitem" class="nav-link">Tipos de Redes</a></li>
+          <li role="none"><a href="medios-de-transmision.html" role="menuitem" class="nav-link" aria-current="page">Medios de Transmisión</a></li>
+          <li role="none"><a href="segmentacion.html" role="menuitem" class="nav-link">Segmentación</a></li>
+          <li role="none"><a href="ancho-de-banda.html" role="menuitem" class="nav-link">Ancho de Banda</a></li>
+          <li role="none"><a href="modelo-osi.html" role="menuitem" class="nav-link">Modelo OSI</a></li>
+        </ul>
+
+        <!-- Añadí id="hamburger" y las líneas con class="hamburger-line" -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+</header>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title" class="hero-title">Redes de Datos</h1>
+                <p class="hero-subtitle">Curso completo sobre redes de computadoras y comunicaciones</p>
+                <button class="cta-button" onclick="scrollToSection('introduccion')" aria-describedby="cta-description">
+                    Comenzar Curso
+                </button>
+                <p id="cta-description" class="sr-only">Desplazarse a la sección de introducción</p>
+            </div>
+            <div class="hero-decoration" aria-hidden="true"></div>
+        </section>
+
+
+
+<main class="main">
+<div class="container">
+    <section id="introduccion" class="section">
+        <h2 id="intro-title" class="section-title">Introducción a las Redes</h2>
+        
+        <div class="card">
+            <h3>¿Qué es una red informática?</h3>
+            <p>Una red informática es un conjunto de dispositivos interconectados que pueden comunicarse entre sí para compartir recursos, información y servicios. Estas conexiones pueden ser físicas (cables) o inalámbricas (Wi-Fi, Bluetooth).</p>
+            <img src="img/logo.jpg" alt="Red informática" class="imagen">
+        </div>
+
+        <div class="card">
+            <h3 id="intro-title" class="section-title">Tipos de redes</h3>
+            Los tipos de redes informáticas se pueden clasificar según su tamaño o alcance geográfico, como PAN (Red de Área Personal), LAN (Red de Área Local), MAN (Red de Área Metropolitana) y WAN (Red de Área Amplia), que van desde una distancia personal hasta una cobertura global. Otra clasificación importante es según su arquitectura (como peer-to-peer sin servidor) o según el tipo de conexión, incluyendo las redes inalámbricas (WLAN) que usan radiofrecuencia y las redes privadas virtuales (VPN) que crean un túnel cifrado sobre una red pública. 
+            
+            <div class="grid">
+                
+                <div class="grid-item">
+                    <h4>LAN (Local Area Network)</h4>
+                    <p>Red de área local que conecta dispositivos en un área geográfica pequeña como una oficina o edificio.</p>
+                    <img src="img/lan.png" alt="Red LAN" class="imagen">
+                </div>
+                
+                <div class="grid-item">
+                    <h4>PAN (Personal Area Network)</h4>
+                    <p>Red de área personal para dispositivos cercanos al usuario (Bluetooth, USB).</p>
+                    <br>
+                    <img src="img/pan.png" alt="Red PAN" class="imagen">    
+                </div>
+
+                <div class="grid-item">
+                    <h4>WLAN (Wireless LAN)</h4>
+                    <p>Red de área local inalámbrica que utiliza tecnología Wi-Fi.</p>
+                    <br>
+                    <img src="img/wlan.png" alt="Red WLAN" class="imagen">
+                </div>
+
+                    <div class="grid-item">
+                    <h4>MAN (Metropolitan Area Network)</h4>
+                    <p>Red de área metropolitana que cubre una ciudad o área metropolitana.</p>
+                    <img src="img/man.png" alt="Red MAN" class="imagen">
+                </div>
+                
+
+                <div class="grid-item">
+                    <h4>WAN (Wide Area Network)</h4>
+                    <p>Red de área amplia que conecta dispositivos a través de grandes distancias geográficas.</p>
+                    <img src="img/wan.png" alt="Red Wan" class="imagen">
+                </div>
+                
+                    <div class="grid-item">
+                    <h4>CAN (Campus Area Network)</h4>
+                    <p>Interconecta varias redes locales (LAN) en un campus universitario o un área geográfica limitada pero más grande que una LAN. </p>
+                    <img src="img/can.png" alt="Red CAN" class="imagen imagen2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dispositivos" class="section">
+        <h2 id="intro-title" class="section-title">Dispositivos de Red</h2>
+        
+        <div class="grid">
+            <div class="card">
+            <div class="logo">
+                <img src="img/router.png" alt="Router" class="logos">
+                <h3>Router</h3>
+                </div>
+                <p>Dispositivo que conecta diferentes redes y dirige el tráfico de datos entre ellas. Opera en la capa 3 del modelo OSI y toma decisiones de enrutamiento basadas en direcciones IP.</p>
+                <ul>
+                    <li>Conecta redes diferentes</li>
+                    <li>Determina la mejor ruta para los datos</li>
+                    <li>Proporciona seguridad mediante firewall</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="logo">
+                <img src="img/Switch.png" alt="Switch" class="logos logos2">
+                <h3>Switch</h3>
+                </div>
+                <p>Dispositivo que conecta múltiples dispositivos en una red local. Opera en la capa 2 del modelo OSI y utiliza direcciones MAC para enviar datos al dispositivo correcto.</p>
+                <ul>
+                    <li>Conecta dispositivos en la misma red</li>
+                    <li>Crea dominios de colisión separados</li>
+                    <li>Aprende direcciones MAC automáticamente</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="logo">
+                <img src="img/hub.png" alt="Hub" class="logos">
+                <h3>Hub</h3>
+                </div>
+                
+                <p>Dispositivo básico que conecta múltiples dispositivos en una red. Opera en la capa física y simplemente repite las señales a todos los puertos.</p>
+                <ul>
+                    <li>Dispositivo de capa física</li>
+                    <li>Crea un solo dominio de colisión</li>
+                    <li>Tecnología obsoleta</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="logo">
+                <img src="img/Access Point.png" alt="Access Point" class="logos logos2">
+                <h3>Access Point</h3>
+                </div>
+                <p>Dispositivo que permite a dispositivos inalámbricos conectarse a una red cableada. Actúa como puente entre redes inalámbricas y cableadas.</p>
+                <ul>
+                    <li>Proporciona acceso Wi-Fi</li>
+                    <li>Extiende la cobertura de red</li>
+                    <li>Puede manejar múltiples conexiones</li>
+                </ul>
+            </div>
+
+                <div class="card">
+                <div class="logo">
+                <img src="img/adaptador de red.png" alt="Adaptador de Red" class="logos logos2" >
+                <h3>Adaptadores de Red </h3>
+                </div>
+                <p>El adaptador de red es un componente encargado de dotar a un equipo o dispositivo de conectividad, ya sea por cable o inalámbrica. </p>
+                <ul>
+                    <li>Permite la conexión a la red</li>
+                    <li>Soporta conexión por cable o inalámbrica</li>
+                    <li>Se instala en dispositivos finales (PC, servidores)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="logo">
+                    <img src="img/firewal.png" alt="Firewall" class="logos logos2">
+                    <h3>Firewall</h3>
+                </div>
+                    <p>Dispositivo o software que controla el tráfico entre redes según reglas de seguridad, protegiendo la red de accesos no autorizados.</p>
+                <ul>
+                    <li>Filtra tráfico entrante y saliente</li>
+                    <li>Puede ser físico o virtual</li>
+                    <li>Incluye funciones de seguridad avanzadas (VPN, IDS/IPS)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="sistemas" class="section">
+        <h2 id="intro-title" class="section-title">Sistemas Operativos de Red (NOS)</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Windows Server</h3>
+                <p>Sistema operativo de Microsoft diseñado para servidores empresariales.</p>
+                <ul>
+                    <li>Active Directory para gestión de usuarios</li>
+                    <li>Servicios de archivo e impresión</li>
+                    <li>Servicios web (IIS)</li>
+                    <li>Integración con productos Microsoft</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Linux Server</h3>
+                <p>Distribuciones Linux optimizadas para servidores (Ubuntu Server, CentOS, Red Hat).</p>
+                <ul>
+                    <li>Código abierto y gratuito</li>
+                    <li>Alta estabilidad y seguridad</li>
+                    <li>Amplia compatibilidad de hardware</li>
+                    <li>Comunidad activa de desarrollo</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>UNIX Server</h3>
+                <p>Sistema operativo estable y seguro usado en servidores corporativos y universidades.</p>
+                <ul>
+                    <li>Alta fiabilidad y escalabilidad</li>
+                    <li>Gestión avanzada de usuarios y permisos</li>
+                    <li>Amplio soporte de software de servidor</li>
+                </ul>
+            </div>
+            <div class="card">
+            <h3>MacOS Server</h3>
+            <p>Sistema operativo de Apple para entornos de servidor y redes pequeñas/medianas.</p>
+            <ul>
+                <li>Gestión de usuarios y grupos</li>
+                <li>Servicios de archivo e impresión</li>
+                <li>Integración con dispositivos Apple</li>
+            </ul>
+        </div>
+
+            <div class="card">
+            <h3>Novell NetWare</h3>
+            <p>Sistema operativo de red histórico, usado principalmente para compartir archivos y recursos en LANs.</p>
+            <ul>
+                <li>Gestión de archivos y usuarios</li>
+                <li>Alta velocidad en redes locales</li>
+                <li>Seguridad integrada en la red</li>
+            </ul>
+            </div>
+                <div class="card">
+            <h3>Windows Essentials</h3>
+            <p>Versiones simplificadas de Windows Server orientadas a pequeñas empresas.</p>
+            <ul>
+                <li>Gestión centralizada de usuarios y recursos</li>
+                <li>Servicios de correo y archivo integrados</li>
+                <li>Facilidad de instalación y administración</li>
+                <li>Compatible con entornos Windows existentes</li>
+            </ul>
+        </div>
+            
+            
+        
+        </div>
+        <div class="card">
+            <h3>Funciones principales de un NOS</h3>
+            <ul>
+                <li><strong>Gestión de usuarios:</strong> Creación, modificación y eliminación de cuentas</li>
+                <li><strong>Control de permisos:</strong> Definir qué usuarios pueden acceder a qué recursos</li>
+                <li><strong>Servicios de impresión:</strong> Gestionar impresoras compartidas en la red</li>
+                <li><strong>Servicios de archivos:</strong> Compartir y gestionar archivos en la red</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="protocolos" class="section">
+        <h2 id="intro-title" class="section-title">Protocolos de Red</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>TCP/IP</h3>
+                <p>Conjunto de protocolos fundamentales para Internet. TCP garantiza la entrega confiable de datos, mientras que IP se encarga del direccionamiento.</p>
+                <ul>
+                    <li>TCP: Protocolo de control de transmisión</li>
+                    <li>IP: Protocolo de Internet</li>
+                    <li>Base de Internet y redes modernas</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>HTTP / HTTPS</h3>
+                <p>Protocolos para transferencia de páginas web. HTTPS utiliza TLS para cifrado y seguridad de los datos transmitidos.</p>
+                <ul>
+                    <li>HTTP: Puerto 80</li>
+                    <li>HTTPS: Puerto 443 (cifrado mediante TLS)</li>
+                    <li>Base de la World Wide Web</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>FTP</h3>
+                <p>Protocolo de transferencia de archivos que permite subir y descargar archivos entre sistemas.</p>
+                <ul>
+                    <li>Puerto 21 para control</li>
+                    <li>Puerto 20 para datos</li>
+                    <li>Modos activo y pasivo</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>DHCP</h3>
+                <p>Protocolo que asigna automáticamente direcciones IP y configuración de red a dispositivos.</p>
+                <ul>
+                    <li>Asignación automática de IP</li>
+                    <li>Configuración de gateway y DNS</li>
+                    <li>Gestión centralizada de direcciones</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>DNS</h3>
+                <p>Sistema de nombres de dominio que traduce nombres de dominio a direcciones IP.</p>
+                <ul>
+                    <li>Resolución de nombres</li>
+                    <li>Jerarquía de servidores</li>
+                    <li>Caché para mejorar rendimiento</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>RIP</h3>
+                <p>Protocolo de enrutamiento utilizado por routers para determinar la mejor ruta dentro de una red interna.</p>
+                <ul>
+                    <li>Routing Information Protocol</li>
+                    <li>Usado en redes pequeñas y medianas</li>
+                    <li>Actualiza rutas periódicamente</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="direccionamiento" class="section">
+        <h2 id="intro-title" class="section-title">Direccionamiento IP</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>IPv4</h3>
+                <p>Protocolo de Internet versión 4, utiliza direcciones de 32 bits (4 octetos).</p>
+                <ul>
+                    <li>Formato: 192.168.1.1</li>
+                    <li>Aproximadamente 4.3 mil millones de direcciones</li>
+                    <li>Clases A, B, C, D, E</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>IPv6</h3>
+                <p>Protocolo de Internet versión 6, utiliza direcciones de 128 bits.</p>
+                <ul>
+                    <li>Formato: 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li>
+                    <li>Prácticamente direcciones ilimitadas</li>
+                    <li>Mejor seguridad y eficiencia</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Máscaras de subred</h3>
+                <p>Definen qué parte de una dirección IP corresponde a la red y qué parte al host.</p>
+                <ul>
+                    <li>Formato: 255.255.255.0 (/24)</li>
+                    <li>Permiten crear subredes</li>
+                    <li>Optimizan el uso de direcciones IP</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Direcciones públicas y privadas</h3>
+                <p><strong>Públicas:</strong> Únicas en Internet, asignadas por ISP</p>
+                <p><strong>Privadas:</strong> Para uso interno, no enrutables en Internet</p>
+                <ul>
+                    <li>10.0.0.0/8 (Clase A)</li>
+                    <li>172.16.0.0/12 (Clase B)</li>
+                    <li>192.168.0.0/16 (Clase C)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>CIDR</h3>
+                <p>Direccionamiento sin clases que permite asignar bloques de direcciones más flexibles.</p>
+                <ul>
+                    <li>Formato: 192.168.1.0/24</li>
+                    <li>Optimiza el uso de direcciones IP</li>
+                    <li>Reduce tamaño de tablas de enrutamiento</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Broadcast y Multicast</h3>
+                <p>Tipos especiales de direccionamiento para enviar mensajes a múltiples hosts.</p>
+                <ul>
+                    <li>Broadcast IPv4: 192.168.1.255</li>
+                    <li>Multicast IPv4: 224.0.0.0 a 239.255.255.255</li>
+                    <li>Multicast IPv6: ff00::/8</li>
+                </ul>
+            </div>
+
+
+
+        </div>
+            <div class="card">
+                <h3>Loopback y Enlace Local</h3>
+                <p>Direcciones especiales para pruebas y comunicación interna en la red.</p>
+                <ul>
+                    <li>Loopback: 127.0.0.1 (IPv4), ::1 (IPv6)</li>
+                    <li>Enlace local: 169.254.x.x (IPv4), fe80::/10 (IPv6)</li>
+                    <li>Usadas para pruebas y comunicación sin DHCP</li>
+                </ul>
+            </div>
+
+
+    </section>
+
+    <section id="seguridad" class="section">
+        <h2 id="intro-title" class="section-title">Seguridad en Redes</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Firewalls</h3>
+                <p>Sistemas que controlan el tráfico de red basándose en reglas de seguridad predefinidas.</p>
+                <ul>
+                    <li>Filtrado de paquetes</li>
+                    <li>Control de aplicaciones</li>
+                    <li>Prevención de intrusiones</li>
+                    <li>Registro de actividad</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>VPN (Virtual Private Network)</h3>
+                <p>Tecnología que crea una conexión segura y cifrada sobre una red pública.</p>
+                <ul>
+                    <li>Cifrado de datos</li>
+                    <li>Acceso remoto seguro</li>
+                    <li>Anonimato y privacidad</li>
+                    <li>Conexión sitio a sitio</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Cifrado</h3>
+                <p>Proceso de codificar información para que solo personas autorizadas puedan acceder a ella.</p>
+                <ul>
+                    <li>Cifrado simétrico (AES)</li>
+                    <li>Cifrado asimétrico (RSA)</li>
+                    <li>Funciones hash (SHA)</li>
+                    <li>Certificados digitales</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Políticas de seguridad</h3>
+                <p>Conjunto de reglas y procedimientos para proteger los recursos de red.</p>
+                <ul>
+                    <li>Gestión de contraseñas</li>
+                    <li>Control de acceso</li>
+                    <li>Actualizaciones de seguridad</li>
+                    <li>Respaldo y recuperación</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>IDS / IPS</h3>
+                <p>Sistemas que detectan o previenen intrusiones y ataques en la red.</p>
+                <ul>
+                    <li>Monitoreo de tráfico en tiempo real</li>
+                    <li>Alertas de actividad sospechosa</li>
+                    <li>Prevención automática de ataques (IPS)</li>
+                    <li>Integración con firewalls</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Antivirus / Antimalware</h3>
+                <p>Software que protege los dispositivos frente a virus, malware y ransomware.</p>
+                <ul>
+                    <li>Detección de virus y troyanos</li>
+                    <li>Escaneo en tiempo real</li>
+                    <li>Actualizaciones automáticas de firmas</li>
+                    <li>Protección en dispositivos conectados a la red</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div class="card">
+                <h3>Segmentación de red</h3>
+                <p>Separación de la red en segmentos o VLANs para mejorar seguridad y rendimiento.</p>
+                <ul>
+                    <li>Aisla tráfico sensible</li>
+                    <li>Reduce el impacto de ataques</li>
+                    <li>Optimiza ancho de banda</li>
+                    <li>Facilita la administración de políticas de seguridad</li>
+                </ul>
+            </div>
+    </section>
+
+    <section id="topologias" class="section">
+        <h2 id="intro-title" class="section-title">Topologías de Red</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Estrella</h3>
+                <p>Todos los dispositivos se conectan a un punto central (switch o hub).</p>
+                <ul>
+                    <li>Fácil instalación y mantenimiento</li>
+                    <li>Fallo de un nodo no afecta la red</li>
+                    <li>Punto central es crítico</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Bus</h3>
+                <p>Todos los dispositivos comparten un cable común (backbone).</p>
+                <ul>
+                    <li>Económica y simple</li>
+                    <li>Fácil agregar dispositivos</li>
+                    <li>Fallo del cable afecta toda la red</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Anillo</h3>
+                <p>Los dispositivos se conectan formando un círculo cerrado.</p>
+                <ul>
+                    <li>Datos viajan en una dirección</li>
+                    <li>No hay colisiones</li>
+                    <li>Fallo de un nodo puede afectar la red</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Malla</h3>
+                <p>Cada dispositivo se conecta directamente con varios otros dispositivos.</p>
+                <ul>
+                    <li>Alta redundancia y confiabilidad</li>
+                    <li>Múltiples rutas de comunicación</li>
+                    <li>Costosa y compleja de implementar</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Árbol (Jerárquica)</h3>
+                <p>Dispositivos conectados en forma de jerarquía, combinando varias topologías estrella.</p>
+                <ul>
+                    <li>Escalable para grandes redes</li>
+                    <li>Falla de un nodo afecta solo su rama</li>
+                    <li>Administración estructurada y centralizada</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Híbrida</h3>
+                <p>Combinación de dos o más topologías para adaptarse a necesidades específicas.</p>
+                <ul>
+                    <li>Flexibilidad en diseño</li>
+                    <li>Permite aprovechar ventajas de varias topologías</li>
+                    <li>Más compleja de administrar</li>
+                </ul>
+            </div>
+            <div class="card">
+  <h3>Árbol (Jerárquica)</h3>
+  <p>Es una combinación de varias topologías estrella conectadas de manera jerárquica, como un árbol con ramas.</p>
+  <ul>
+    <li>Escalable y organizada</li>
+    <li>Fácil de detectar fallos en ramas específicas</li>
+    <li>El fallo en la raíz afecta a toda la red</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Híbrida</h3>
+  <p>Es la combinación de dos o más topologías de red diferentes para aprovechar las ventajas de cada una.</p>
+  <ul>
+    <li>Flexible y adaptable</li>
+    <li>Permite aprovechar lo mejor de cada topología</li>
+    <li>Puede ser compleja y costosa de implementar</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Doble Anillo</h3>
+  <p>Se utilizan dos anillos en paralelo para mejorar la redundancia y la seguridad en la transmisión de datos.</p>
+  <ul>
+    <li>Alta tolerancia a fallos</li>
+    <li>Mayor velocidad y confiabilidad</li>
+    <li>Más costosa y compleja que el anillo simple</li>
+  </ul>
+</div>
+
+
+        </div>
+
+<div class="card">
+  <h3>Punto a Punto (P2P)</h3>
+  <p>Conexión directa entre dos dispositivos sin necesidad de un nodo central.</p>
+  <ul>
+    <li>Muy simple y eficiente entre dos equipos</li>
+    <li>No requiere dispositivos intermedios</li>
+    <li>No es escalable para más de dos nodos</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Celular</h3>
+  <p>Se utiliza en redes móviles. El área de cobertura se divide en celdas, cada una con una antena base.</p>
+  <ul>
+    <li>Permite cobertura amplia dividiendo áreas geográficas</li>
+    <li>Escalable mediante más antenas</li>
+    <li>Costosa de implementar y mantener</li>
+  </ul>
+</div>
+        
+
+
+    </section>
+
+
+    <section id="administracion" class="section">
+        <h2 id="intro-title" class="section-title">Administración de Redes</h2>
+        <div class="card">
+            <h3>Herramientas de monitorización</h3> 
+            <div class="grid">
+                <div class="grid-item">
+                    <h4>PING</h4>
+                    <p>Verifica la conectividad entre dispositivos enviando paquetes ICMP.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Traceroute</h4>
+                    <p>Muestra la ruta que siguen los paquetes hasta su destino.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Netstat</h4>
+                    <p>Muestra conexiones de red activas y puertos en uso.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Ipconfig / Ifconfig</h4>
+                    <p>Muestra y configura parámetros de red del sistema.</p>
+        </div>
+                
+                        
+                        
+    <div class="grid-item">
+        <h4>ARP</h4>
+        <p>Muestra y gestiona la tabla de direcciones IP ↔ MAC de la red.</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>NSLOOKUP / DIG</h4>
+        <p>Consultan servidores DNS para obtener la resolución de nombres de dominio.</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>WHOIS</h4>
+        <p>Devuelve información sobre dominios, direcciones IP y propietarios.</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>Telnet / Netcat</h4>
+        <p>Permiten probar conectividad con puertos específicos en dispositivos remotos.</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>CURL / WGET</h4>
+        <p>Herramientas para probar conexiones HTTP/HTTPS y transferir archivos.</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>MTR (My Traceroute)</h4>
+        <p>Combina ping y traceroute mostrando latencia y pérdida de paquetes en tiempo real.</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>ROUTE / IP ROUTE</h4>
+        <p>Muestra o configura la tabla de enrutamiento de red.</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>ETHTOOL (Linux)</h4>
+        <p>Consulta y configura parámetros de interfaces de red (velocidad, duplex, etc.).</p>
+    </div>
+
+
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="grid">
+        <div class="card">
+            <h3>Nagios / Zabbix</h3>
+            <p>Plataformas de monitoreo que permiten supervisar redes, servidores y aplicaciones.</p>
+            <ul>
+                <li>Alertas en tiempo real ante fallos</li>
+                <li>Paneles de control gráficos</li>
+                <li>Extensible mediante plugins</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>PRTG Network Monitor</h3>
+            <p>Herramienta de monitoreo de red que mide disponibilidad, tráfico y rendimiento.</p>
+            <ul>
+                <li>Supervisión de ancho de banda</li>
+                <li>Detección de cuellos de botella</li>
+                <li>Alertas por correo y notificaciones</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Iperf</h3>
+            <p>Herramienta de línea de comandos para medir el ancho de banda y la calidad de la conexión.</p>
+            <ul>
+                <li>Pruebas TCP y UDP</li>
+                <li>Medición de latencia y jitter</li>
+                <li>Ideal para diagnósticos de red</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Tcpdump</h3>
+            <p>Analizador de paquetes en consola, útil para administradores de sistemas.</p>
+            <ul>
+                <li>Captura de tráfico en tiempo real</li>
+                <li>Compatible con filtros avanzados</li>
+                <li>Ligero y rápido</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Cacti / MRTG</h3>
+            <p>Herramientas gráficas para monitorear el uso de ancho de banda y otros recursos.</p>
+            <ul>
+                <li>Generación de gráficos históricos</li>
+                <li>Basadas en SNMP</li>
+                <li>Visualización sencilla del tráfico</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>NetFlow / sFlow</h3>
+            <p>Tecnologías usadas en routers y switches para analizar flujos de tráfico.</p>
+            <ul>
+                <li>Monitoreo del comportamiento de red</li>
+                <li>Detección de patrones de tráfico</li>
+                <li>Soporte en dispositivos Cisco y otros fabricantes</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Wireshark</h3>
+            <p>Analizador de protocolos de red que captura y examina el tráfico de datos.</p>
+            <ul>
+                <li>Captura de paquetes en tiempo real</li>
+                <li>Análisis detallado de protocolos</li>
+                <li>Filtros avanzados</li>
+                <li>Interfaz gráfica intuitiva</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Nmap</h3>
+            <p>Herramienta de exploración de red y auditoría de seguridad.</p>
+            <ul>
+                <li>Descubrimiento de hosts</li>
+                <li>Escaneo de puertos</li>
+                <li>Detección de servicios</li>
+                <li>Identificación de sistemas operativos</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>SNMP</h3>
+            <p>Protocolo de gestión de red que permite monitorear y configurar dispositivos de manera remota.</p>
+            <ul>
+                <li>Recopilación de métricas y estado de dispositivos</li>
+                <li>Alertas automáticas ante fallas</li>
+                <li>Integración con sistemas NMS (Network Management System)</li>
+            </ul>
+        </div>
+
+       
+        </div>
+         <div class="card">
+            <h3>SSH / Telnet</h3>
+            <p>Permite administrar dispositivos de red de forma remota mediante línea de comandos.</p>
+            <ul>
+                <li>SSH: cifrado seguro</li>
+                <li>Telnet: sin cifrado (solo en entornos seguros o pruebas)</li>
+                <li>Administración de routers, switches y servidores</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>VLAN y Segmentación</h3>
+            <p>División de la red en segmentos lógicos para mejorar rendimiento y seguridad.</p>
+            <ul>
+                <li>Separación de tráfico por departamentos o servicios</li>
+                <li>Facilita políticas de seguridad</li>
+                <li>Reduce congestión y colisiones</li>
+            </ul>
+    </div>
+
+    <div class="card">
+        <div class="card">
+        <h3>Mejores prácticas de administración</h3>
+        <ul>
+            <li><strong>Documentación:</strong> Mantener diagramas, configuraciones y políticas actualizadas.</li>
+            <li><strong>Monitoreo continuo:</strong> Supervisar rendimiento, disponibilidad y tráfico de la red.</li>
+            <li><strong>Respaldos regulares:</strong> Copias de seguridad de configuraciones y datos críticos.</li>
+            <li><strong>Actualizaciones:</strong> Mantener firmware, sistemas operativos y software de red al día.</li>
+            <li><strong>Seguridad:</strong> Implementar políticas, controles de acceso y cifrado de datos.</li>
+            <li><strong>Gestión de usuarios y permisos:</strong> Definir roles claros y limitar accesos según necesidad.</li>
+            <li><strong>Automatización de tareas:</strong> Uso de scripts o herramientas para mantenimiento, reportes y actualizaciones.</li>
+            <li><strong>Pruebas de rendimiento y carga:</strong> Evaluar la eficiencia de la red antes de implementar cambios.</li>
+            <li><strong>Plan de recuperación ante desastres (DRP):</strong> Estrategias para restaurar servicios críticos ante fallas graves.</li>
+            <li><strong>Registro y auditoría de eventos:</strong> Mantener logs para detectar problemas o intrusiones.</li>
+        </ul>
+    </div>
+
+</section>
+        <nav class="page-navigation" aria-label="Navegación entre páginas">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link nav-prev">
+                        <span class="nav-direction">← Anterior</span>
+                        <span class="nav-title">Introducción</span>
+                    </a>
+                    <a href="tipos-de-redes.html" class="nav-link nav-next">
+                        <span class="nav-direction" >Siguiente →</span>
+                        <span class="nav-title">Medios de Transmisión</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Redes Informáticas - Guía Educativa de Lautaro Aragón</p>
+        </div>
+    </footer>
+
+ <button id="scrollTop" class="scroll-top" aria-label="Volver arriba" title="Volver arriba">
+        ↑
+    </button>
+<script src="js/main.js"></script>
+</body>
+</html>

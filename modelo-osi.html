@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa del Modelo OSI - Las 7 capas del modelo de referencia para interconexión de sistemas abiertos">
+    <meta name="keywords" content="modelo OSI, 7 capas, redes, protocolos, aplicación, transporte, red">
+    <meta name="author" content="Profesor Lautaro Aragón">
+    <title>Modelo OSI - Redes de Datos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+
+    
+<header class="header" role="banner">
+  <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html" class="logo-text">Redes de Datos</a>
+        </div>
+
+        <!-- Añadí id="nav-menu" y class="nav-link" en los <a> -->
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" class="nav-link">Inicio</a></li>
+          <li role="none"><a href="resumen.html" role="menuitem" class="nav-link">Resumen</a></li>
+          <li role="none"><a href="tipos-de-redes.html" role="menuitem" class="nav-link">Tipos de Redes</a></li>
+          <li role="none"><a href="medios-de-transmision.html" role="menuitem" class="nav-link" aria-current="page">Medios de Transmisión</a></li>
+          <li role="none"><a href="segmentacion.html" role="menuitem" class="nav-link">Segmentación</a></li>
+          <li role="none"><a href="ancho-de-banda.html" role="menuitem" class="nav-link">Ancho de Banda</a></li>
+          <li role="none"><a href="modelo-osi.html" role="menuitem" class="nav-link">Modelo OSI</a></li>
+        </ul>
+
+        <!-- Añadí id="hamburger" y las líneas con class="hamburger-line" -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+</header>
+
+    <!-- Replaced entire main content with new modern OSI design -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Header -->
+        <section class="hero ">
+            <div class="container">
+                <h1 class="hero-title" id="hero-title">Modelo OSI</h1>
+                <p class="hero-subtitle">
+                    Comprende las 7 capas del modelo de referencia para la interconexión de sistemas abiertos
+                </p>
+                 <button class="cta-button" onclick="scrollToSection('introduccion')" aria-describedby="cta-description">Comenzar</button>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="osi-nav-container" id="introduccion">
+            <div class="container">
+                <div class="osi-nav-content">
+                    <button onclick="showOSISection('overview')" class="osi-nav-btn active">
+                        Resumen
+                    </button>
+                    <button onclick="showOSISection('layers')" class="osi-nav-btn">
+                        Capas
+                    </button>
+                    <button onclick="showOSISection('examples')" class="osi-nav-btn">
+                        Ejemplos
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container osi-main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="osi-section-content">
+                <div class="osi-card">
+                    <h2 class="osi-section-title">¿Qué es el Modelo OSI?</h2>
+                    <div class="osi-grid-2">
+                        <div>
+                            <p class="osi-text-content">
+                                El modelo OSI (Open Systems Interconnection) es un marco conceptual que estandariza las funciones de un sistema de comunicación en siete capas abstractas.
+                            </p>
+                            <p class="osi-text-content">
+                                Fue desarrollado por la Organización Internacional de Normalización (ISO) en 1984 para facilitar la comunicación entre diferentes sistemas informáticos.
+                            </p>
+                            <div class="osi-info-box">
+                                <h3 class="osi-info-title">Beneficios del Modelo OSI:</h3>
+                                <ul class="osi-info-list">
+                                    <li>• Estandarización de protocolos</li>
+                                    <li>• Facilita el troubleshooting</li>
+                                    <li>• Modularidad en el diseño</li>
+                                    <li>• Interoperabilidad entre sistemas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="osi-structure">
+                            <h3 class="osi-title">Estructura del Modelo OSI</h3>
+                            <div class="osi-layers">
+                                <div class="osi-layer osi-layer-7">7. Aplicación</div>
+                                <div class="osi-layer osi-layer-6">6. Presentación</div>
+                                <div class="osi-layer osi-layer-5">5. Sesión</div>
+                                <div class="osi-layer osi-layer-4">4. Transporte</div>
+                                <div class="osi-layer osi-layer-3">3. Red</div>
+                                <div class="osi-layer osi-layer-2">2. Enlace de Datos</div>
+                                <div class="osi-layer osi-layer-1">1. Física</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Layers Section -->
+            <section id="layers" class="osi-section-content osi-hidden">
+                <h2 class="osi-section-title osi-section-title-center">Las 7 Capas del Modelo OSI</h2>
+                
+                <!-- Layer 7 - Application -->
+                <div class="osi-layer-card osi-border-red" onclick="toggleOSILayer(this)">
+                    <div class="osi-layer-header">
+                        <div class="osi-layer-info">
+                            <div class="osi-layer-number osi-layer-7">7</div>
+                            <div>
+                                <h3 class="osi-layer-title">Capa de Aplicación</h3>
+                                <p class="osi-layer-subtitle">Interfaz entre el usuario y la red</p>
+                            </div>
+                        </div>
+                        <div class="osi-layer-toggle" style="color: #1e40af;">+</div>
+                    </div>
+                    <div class="osi-layer-details osi-hidden">
+                        <div class="osi-grid-2">
+                            <div>
+                                <h4 class="osi-detail-title">Función:</h4>
+                                <p class="osi-text-content">Proporciona servicios de red directamente a las aplicaciones del usuario final.</p>
+                                <h4 class="osi-detail-title">Protocolos:</h4>
+                                <div class="osi-protocol-tags">
+                                    <span class="osi-protocol-tag osi-tag-red">HTTP/HTTPS</span>
+                                    <span class="osi-protocol-tag osi-tag-red">FTP</span>
+                                    <span class="osi-protocol-tag osi-tag-red">SMTP</span>
+                                    <span class="osi-protocol-tag osi-tag-red">DNS</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="osi-detail-title">Ejemplos:</h4>
+                                <ul class="osi-feature-list">
+                                    <li>• Navegadores web</li>
+                                    <li>• Clientes de email</li>
+                                    <li>• Aplicaciones de chat</li>
+                                    <li>• Transferencia de archivos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 6 - Presentation -->
+                <div class="osi-layer-card osi-border-orange" onclick="toggleOSILayer(this)">
+                    <div class="osi-layer-header">
+                        <div class="osi-layer-info">
+                            <div class="osi-layer-number osi-layer-6">6</div>
+                            <div>
+                                <h3 class="osi-layer-title">Capa de Presentación</h3>
+                                <p class="osi-layer-subtitle">Traducción, cifrado y compresión</p>
+                            </div>
+                        </div>
+                        <div class="osi-layer-toggle" style="color: #1e40af;">+</div>
+                    </div>
+                    <div class="osi-layer-details osi-hidden">
+                        <div class="osi-grid-2">
+                            <div>
+                                <h4 class="osi-detail-title">Función:</h4>
+                                <p class="osi-text-content">Traduce, cifra y comprime los datos para la capa de aplicación.</p>
+                                <h4 class="osi-detail-title">Servicios:</h4>
+                                <div class="osi-protocol-tags">
+                                    <span class="osi-protocol-tag osi-tag-orange">Cifrado</span>
+                                    <span class="osi-protocol-tag osi-tag-orange">Compresión</span>
+                                    <span class="osi-protocol-tag osi-tag-orange">Traducción</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="osi-detail-title">Ejemplos:</h4>
+                                <ul class="osi-feature-list">
+                                    <li>• SSL/TLS</li>
+                                    <li>• JPEG, GIF, PNG</li>
+                                    <li>• MPEG, MP3</li>
+                                    <li>• ASCII, EBCDIC</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 5 - Session -->
+                <div class="osi-layer-card osi-border-yellow" onclick="toggleOSILayer(this)">
+                    <div class="osi-layer-header">
+                        <div class="osi-layer-info">
+                            <div class="osi-layer-number osi-layer-5">5</div>
+                            <div>
+                                <h3 class="osi-layer-title">Capa de Sesión</h3>
+                                <p class="osi-layer-subtitle">Gestión de sesiones y diálogos</p>
+                            </div>
+                        </div>
+                        <div class="osi-layer-toggle" style="color: #1e40af;">+</div>
+                    </div>
+                    <div class="osi-layer-details osi-hidden">
+                        <div class="osi-grid-2">
+                            <div>
+                                <h4 class="osi-detail-title">Función:</h4>
+                                <p class="osi-text-content">Establece, gestiona y termina las sesiones entre aplicaciones.</p>
+                                <h4 class="osi-detail-title">Protocolos:</h4>
+                                <div class="osi-protocol-tags">
+                                    <span class="osi-protocol-tag osi-tag-yellow">NetBIOS</span>
+                                    <span class="osi-protocol-tag osi-tag-yellow">RPC</span>
+                                    <span class="osi-protocol-tag osi-tag-yellow">SQL</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="osi-detail-title">Funciones:</h4>
+                                <ul class="osi-feature-list">
+                                    <li>• Control de diálogo</li>
+                                    <li>• Sincronización</li>
+                                    <li>• Puntos de control</li>
+                                    <li>• Recuperación de sesión</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 4 - Transport -->
+                <div class="osi-layer-card osi-border-green" onclick="toggleOSILayer(this)">
+                    <div class="osi-layer-header">
+                        <div class="osi-layer-info">
+                            <div class="osi-layer-number osi-layer-4">4</div>
+                            <div>
+                                <h3 class="osi-layer-title">Capa de Transporte</h3>
+                                <p class="osi-layer-subtitle">Entrega confiable de datos</p>
+                            </div>
+                        </div>
+                        <div class="osi-layer-toggle" style="color: #ffffff;">+</div>
+                    </div>
+                    <div class="osi-layer-details osi-hidden">
+                        <div class="osi-grid-2">
+                            <div>
+                                <h4 class="osi-detail-title">Función:</h4>
+                                <p class="osi-text-content">Garantiza la entrega completa y correcta de los datos.</p>
+                                <h4 class="osi-detail-title">Protocolos:</h4>
+                                <div class="osi-protocol-tags">
+                                    <span class="osi-protocol-tag osi-tag-green">TCP</span>
+                                    <span class="osi-protocol-tag osi-tag-green">UDP</span>
+                                    <span class="osi-protocol-tag osi-tag-green">SPX</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="osi-detail-title">Servicios:</h4>
+                                <ul class="osi-feature-list">
+                                    <li>• Control de flujo</li>
+                                    <li>• Control de errores</li>
+                                    <li>• Segmentación</li>
+                                    <li>• Multiplexación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3 - Network -->
+                <div class="osi-layer-card osi-border-blue" onclick="toggleOSILayer(this)">
+                    <div class="osi-layer-header">
+                        <div class="osi-layer-info">
+                            <div class="osi-layer-number osi-layer-3">3</div>
+                            <div>
+                                <h3 class="osi-layer-title">Capa de Red</h3>
+                                <p class="osi-layer-subtitle">Enrutamiento y direccionamiento</p>
+                            </div>
+                        </div>
+                        <div class="osi-layer-toggle" style="color: #ffffff;">+</div>
+                    </div>
+                    <div class="osi-layer-details osi-hidden">
+                        <div class="osi-grid-2">
+                            <div>
+                                <h4 class="osi-detail-title">Función:</h4>
+                                <p class="osi-text-content">Determina la mejor ruta para enviar datos a través de la red.</p>
+                                <h4 class="osi-detail-title">Protocolos:</h4>
+                                <div class="osi-protocol-tags">
+                                    <span class="osi-protocol-tag osi-tag-blue">IP</span>
+                                    <span class="osi-protocol-tag osi-tag-blue">ICMP</span>
+                                    <span class="osi-protocol-tag osi-tag-blue">OSPF</span>
+                                    <span class="osi-protocol-tag osi-tag-blue">BGP</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="osi-detail-title">Dispositivos:</h4>
+                                <ul class="osi-feature-list">
+                                    <li>• Routers</li>
+                                    <li>• Switches de capa 3</li>
+                                    <li>• Gateways</li>
+                                    <li>• Firewalls</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Data Link -->
+                <div class="osi-layer-card osi-border-indigo" onclick="toggleOSILayer(this)">
+                    <div class="osi-layer-header">
+                        <div class="osi-layer-info">
+                            <div class="osi-layer-number osi-layer-2">2</div>
+                            <div>
+                                <h3 class="osi-layer-title">Capa de Enlace de Datos</h3>
+                                <p class="osi-layer-subtitle">Control de acceso al medio</p>
+                            </div>
+                        </div>
+                        <div class="osi-layer-toggle" style="color: #ffffff;">+</div>
+                    </div>
+                    <div class="osi-layer-details osi-hidden">
+                        <div class="osi-grid-2">
+                            <div>
+                                <h4 class="osi-detail-title">Función:</h4>
+                                <p class="osi-text-content">Proporciona transferencia de datos libre de errores entre nodos adyacentes.</p>
+                                <h4 class="osi-detail-title">Protocolos:</h4>
+                                <div class="osi-protocol-tags">
+                                    <span class="osi-protocol-tag osi-tag-indigo">Ethernet</span>
+                                    <span class="osi-protocol-tag osi-tag-indigo">Wi-Fi</span>
+                                    <span class="osi-protocol-tag osi-tag-indigo">PPP</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="osi-detail-title">Dispositivos:</h4>
+                                <ul class="osi-feature-list">
+                                    <li>• Switches</li>
+                                    <li>• Bridges</li>
+                                    <li>• Access Points</li>
+                                    <li>• Tarjetas de red</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Physical -->
+                <div class="osi-layer-card osi-border-purple" onclick="toggleOSILayer(this)">
+                    <div class="osi-layer-header">
+                        <div class="osi-layer-info">
+                            <div class="osi-layer-number osi-layer-1">1</div>
+                            <div>
+                                <h3 class="osi-layer-title">Capa Física</h3>
+                                <p class="osi-layer-subtitle">Transmisión de bits</p>
+                            </div>
+                        </div>
+                        <div class="osi-layer-toggle" style="color: #ffffff;">+</div>
+                    </div>
+                    <div class="osi-layer-details osi-hidden">
+                        <div class="osi-grid-2">
+                            <div>
+                                <h4 class="osi-detail-title">Función:</h4>
+                                <p class="osi-text-content">Define las características eléctricas, mecánicas y funcionales para transmitir bits.</p>
+                                <h4 class="osi-detail-title">Estándares:</h4>
+                                <div class="osi-protocol-tags">
+                                    <span class="osi-protocol-tag osi-tag-purple">IEEE 802.3</span>
+                                    <span class="osi-protocol-tag osi-tag-purple">RS-232</span>
+                                    <span class="osi-protocol-tag osi-tag-purple">USB</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="osi-detail-title">Componentes:</h4>
+                                <ul class="osi-feature-list">
+                                    <li>• Cables de red</li>
+                                    <li>• Hubs</li>
+                                    <li>• Repetidores</li>
+                                    <li>• Conectores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Examples Section -->
+            <section id="examples" class="osi-section-content osi-hidden">
+                <h2 class="osi-section-title osi-section-title-center">Ejemplos Prácticos</h2>
+                <div class="osi-grid-2">
+                    <div class="osi-card">
+                        <h3 class="osi-layer-title" style="margin-bottom: 1rem;">Navegación Web (HTTP)</h3>
+                        <div>
+                            <div class="osi-example-step osi-step-red">
+                                <div class="osi-step-number osi-layer-7">7</div>
+                                <span class="osi-step-text">Navegador web (Chrome, Firefox)</span>
+                            </div>
+                            <div class="osi-example-step osi-step-orange">
+                                <div class="osi-step-number osi-layer-6">6</div>
+                                <span class="osi-step-text">Cifrado SSL/TLS, compresión GZIP</span>
+                            </div>
+                            <div class="osi-example-step osi-step-yellow">
+                                <div class="osi-step-number osi-layer-5">5</div>
+                                <span class="osi-step-text">Sesión HTTP persistente</span>
+                            </div>
+                            <div class="osi-example-step osi-step-green">
+                                <div class="osi-step-number osi-layer-4">4</div>
+                                <span class="osi-step-text">TCP puerto 80/443</span>
+                            </div>
+                            <div class="osi-example-step osi-step-blue">
+                                <div class="osi-step-number osi-layer-3">3</div>
+                                <span class="osi-step-text">Direcciones IP, enrutamiento</span>
+                            </div>
+                            <div class="osi-example-step osi-step-indigo">
+                                <div class="osi-step-number osi-layer-2">2</div>
+                                <span class="osi-step-text">Ethernet, Wi-Fi</span>
+                            </div>
+                            <div class="osi-example-step osi-step-purple">
+                                <div class="osi-step-number osi-layer-1">1</div>
+                                <span class="osi-step-text">Cable UTP, fibra óptica</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="osi-card">
+                        <h3 class="osi-layer-title" style="margin-bottom: 1rem;">Envío de Email (SMTP)</h3>
+                        <div>
+                            <div class="osi-example-step osi-step-red">
+                                <div class="osi-step-number osi-layer-7">7</div>
+                                <span class="osi-step-text">Cliente de email (Outlook, Gmail)</span>
+                            </div>
+                            <div class="osi-example-step osi-step-orange">
+                                <div class="osi-step-number osi-layer-6">6</div>
+                                <span class="osi-step-text">Codificación MIME, cifrado</span>
+                            </div>
+                            <div class="osi-example-step osi-step-yellow">
+                                <div class="osi-step-number osi-layer-5">5</div>
+                                <span class="osi-step-text">Sesión SMTP autenticada</span>
+                            </div>
+                            <div class="osi-example-step osi-step-green">
+                                <div class="osi-step-number osi-layer-4">4</div>
+                                <span class="osi-step-text">TCP puerto 25/587</span>
+                            </div>
+                            <div class="osi-example-step osi-step-blue">
+                                <div class="osi-step-number osi-layer-3">3</div>
+                                <span class="osi-step-text">Enrutamiento IP al servidor</span>
+                            </div>
+                            <div class="osi-example-step osi-step-indigo">
+                                <div class="osi-step-number osi-layer-2">2</div>
+                                <span class="osi-step-text">Frame Ethernet</span>
+                            </div>
+                            <div class="osi-example-step osi-step-purple">
+                                <div class="osi-step-number osi-layer-1">1</div>
+                                <span class="osi-step-text">Señales eléctricas/ópticas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation between pages -->
+        <nav class="page-navigation" aria-label="Navegación entre páginas">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="ancho-de-banda.html" class="nav-link nav-prev">
+                        <span class="nav-direction">← Anterior</span>
+                        <span class="nav-title">Ancho de Banda</span>
+                    </a>
+                    <a href="index.html" class="nav-link nav-next">
+                        <span class="nav-direction">Inicio →</span>
+                        <span class="nav-title">Página Principal</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 - Profesor: Lautaro Aragón</p>
+                <p>Curso completo sobre redes de computadoras</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Volver arriba" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa sobre ancho de banda en redes de datos - Conceptos, medición, planificación y servicios de red">
+    <meta name="keywords" content="ancho de banda, bandwidth, redes, networking, DHCP, DNS, WINS">
+    <meta name="author" content="Profesor Lautaro Aragón">
+    <title>Ancho de Banda - Redes de Datos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+ 
+    
+<header class="header" role="banner">
+  <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html" class="logo-text">Redes de Datos</a>
+        </div>
+
+        <!-- Añadí id="nav-menu" y class="nav-link" en los <a> -->
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" class="nav-link">Inicio</a></li>
+          <li role="none"><a href="resumen.html" role="menuitem" class="nav-link">Resumen</a></li>
+          <li role="none"><a href="tipos-de-redes.html" role="menuitem" class="nav-link">Tipos de Redes</a></li>
+          <li role="none"><a href="medios-de-transmision.html" role="menuitem" class="nav-link" aria-current="page">Medios de Transmisión</a></li>
+          <li role="none"><a href="segmentacion.html" role="menuitem" class="nav-link">Segmentación</a></li>
+          <li role="none"><a href="ancho-de-banda.html" role="menuitem" class="nav-link">Ancho de Banda</a></li>
+          <li role="none"><a href="modelo-osi.html" role="menuitem" class="nav-link">Modelo OSI</a></li>
+        </ul>
+
+        <!-- Añadí id="hamburger" y las líneas con class="hamburger-line" -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+</header>
+
+
+
+    <main id="main-content" class="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero hero-bandwidth" id="introduccion">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Ancho de Banda</h1>
+                    <p class="hero-subtitle">Comprende la capacidad de transmisión de datos y servicios de red</p>
+                    <div class="hero-actions">
+                       <button class="cta-button" onclick="scrollToSection('introduccion')" aria-describedby="cta-description">
+                    Comenzar
+                </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Bandwidth Introduction -->
+        <section id="bandwidth-intro" class="section">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">¿Qué es el Ancho de Banda?</h2>
+                    <p class="lead">El ancho de banda es la cantidad máxima de información (bits) que se puede enviar a través de un medio en un momento dado.</p>
+                    
+                    <div class="bandwidth-analogy">
+                        <h3 class="subsection-title">Analogía del Caño de Agua</h3>
+                        <div class="pipe-analogy">
+                            <div class="pipe-comparison">
+                                <div class="pipe small-pipe">
+                                    <div class="pipe-visual" role="img" aria-label="Caño pequeño">🚰</div>
+                                    <div class="pipe-info">
+                                        <h4>Caño pequeño</h4>
+                                        <p>Menos agua por segundo</p>
+                                        <p class="highlight">= Menor ancho de banda</p>
+                                    </div>
+                                </div>
+                                <div class="pipe large-pipe">
+                                    <div class="pipe-visual" role="img" aria-label="Caño grande">🌊</div>
+                                    <div class="pipe-info">
+                                        <h4>Caño grande</h4>
+                                        <p>Más agua por segundo</p>
+                                        <p class="highlight">= Mayor ancho de banda</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bandwidth Measurement -->
+        <section id="bandwidth-measurement" class="section bg-light">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">Medición del Ancho de Banda</h2>
+                    <p class="lead">Se mide en <strong>bits por segundo (bps)</strong>, no en bytes</p>
+                    
+<div class="measurement-table">
+  <h3 class="subsection-title">Tabla de Conversiones</h3>
+  <div class="conversion-table">
+    
+    <div class="conversion-item">
+      <h4>1 Kbps</h4>
+      <p><strong>1,000 bps</strong></p>
+      <p>≈ 125 B/s</p>
+      <p class="explanation">Suficiente para transferencias muy básicas, como texto.</p>
+    </div>
+    
+    <div class="conversion-item">
+      <h4>1 Mbps</h4>
+      <p><strong>1,000,000 bps</strong></p>
+      <p>≈ 125 KB/s</p>
+      <p class="explanation">Velocidad típica de conexiones antiguas de Internet.</p>
+    </div>
+    
+    <div class="conversion-item">
+      <h4>1 Gbps</h4>
+      <p><strong>1,000,000,000 bps</strong></p>
+      <p>≈ 125 MB/s</p>
+      <p class="explanation">Usado en redes modernas de fibra óptica o LAN gigabit.</p>
+    </div>
+    
+    <div class="conversion-item">
+      <h4>1 Tbps</h4>
+      <p><strong>1,000,000,000,000 bps</strong></p>
+      <p>≈ 125 GB/s</p>
+      <p class="explanation">Velocidades experimentales en backbone de Internet.</p>
+    </div>
+    
+  </div>
+  
+  <div class="conversion-formula">
+    <strong>Fórmula:</strong> Bits ÷ 8 = Bytes (1 byte = 8 bits)
+  </div>
+</div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bandwidth Calculator -->
+        <section id="bandwidth-calculator" class="section">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">Calculadora de Ancho de Banda</h2>
+                    <div class="calculator-container">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="fileSize">Tamaño del archivo (MB):</label>
+                                <input type="number" id="fileSize" placeholder="25" min="0" step="0.1" aria-describedby="fileSize-help">
+                                <small id="fileSize-help">Ingresa el tamaño del archivo en megabytes</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="bandwidth">Ancho de banda (Mbps):</label>
+                                <input type="number" id="bandwidth" placeholder="100" min="0" step="0.1" aria-describedby="bandwidth-help">
+                                <small id="bandwidth-help">Ingresa el ancho de banda en megabits por segundo</small>
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateTransferTime()" aria-describedby="result">
+                                Calcular Tiempo de Transferencia
+                            </button>
+                        </div>
+                        <div id="result" class="calc-result" role="region" aria-live="polite">
+  <p class="calc-message">Ingresa los datos y presiona calcular.</p>
+</div>
+<div id="calc-explanation" class="calc-explanation"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Network Services -->
+        <section id="network-services" class="section bg-light">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">Servicios de Red</h2>
+                    
+                    <!-- WINS and NetBIOS -->
+                    <div class="service-section">
+                        <h3 class="subsection-title">Identificación de hosts: WINS y NetBIOS</h3>
+                        <p>En redes Windows existen servicios especializados para anunciar e identificar hosts en la red:</p>
+                        
+                        <div class="service-grid">
+                            <div class="service-card">
+                                <h4>NetBIOS</h4>
+                                <p>Identifica un host bajo un nombre específico (nombre de host).</p>
+                                <div class="service-features">
+                                    <ul>
+                                        <li>Identificación por nombre</li>
+                                        <li>Anuncio de servicios</li>
+                                        <li>Compatibilidad Windows</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <h4>WINS</h4>
+                                <p>Windows Internet Naming Service mantiene correspondencia entre direcciones IP y nombres NetBIOS.</p>
+                                <div class="service-features">
+                                    <ul>
+                                        <li>Resolución de nombres</li>
+                                        <li>Tabla IP-Nombre</li>
+                                        <li>Localización rápida</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DNS Service -->
+                    <div class="service-section">
+                        <h3 class="subsection-title">Servicio DNS</h3>
+                        <p>El Sistema de Nombres de Dominio traduce nombres "amigables" en direcciones IP:</p>
+                        
+                        <div class="dns-example">
+                            <code>educacionit.com → 54.207.106.237</code>
+                        </div>
+
+                        <div class="dns-process">
+                            <h4>Proceso de resolución DNS</h4>
+                            <div class="process-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Consulta local</h5>
+                                        <p>Búsqueda en archivo hosts local</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>Consulta DNS</h5>
+                                        <p>Solicitud al servidor DNS configurado</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>Resolución</h5>
+                                        <p>Obtención de la dirección IP</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DHCP Service -->
+                    <div class="service-section">
+                        <h3 class="subsection-title">Servicio DHCP</h3>
+                        <p>Protocolo de configuración dinámica que asigna automáticamente parámetros de red a dispositivos.</p>
+                        
+                        <div class="dhcp-process">
+                            <h4>Proceso DORA</h4>
+                            <div class="dora-steps">
+                                <div class="dora-step">
+                                    <div class="step-letter">D</div>
+                                    <div class="step-info">
+                                        <h5>DISCOVER</h5>
+                                        <p>Cliente busca servidores DHCP</p>
+                                    </div>
+                                </div>
+                                <div class="dora-step">
+                                    <div class="step-letter">O</div>
+                                    <div class="step-info">
+                                        <h5>OFFER</h5>
+                                        <p>Servidor ofrece configuración</p>
+                                    </div>
+                                </div>
+                                <div class="dora-step">
+                                    <div class="step-letter">R</div>
+                                    <div class="step-info">
+                                        <h5>REQUEST</h5>
+                                        <p>Cliente solicita configuración</p>
+                                    </div>
+                                </div>
+                                <div class="dora-step">
+                                    <div class="step-letter">A</div>
+                                    <div class="step-info">
+                                        <h5>ACK</h5>
+                                        <p>Servidor confirma asignación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation between pages -->
+        <nav class="page-navigation" aria-label="Navegación entre páginas">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="segmentacion.html" class="nav-link nav-prev">
+                        <span class="nav-direction">← Anterior</span>
+                        <span class="nav-title">Segmentación</span>
+                    </a>
+                    <a href="modelo-osi.html" class="nav-link nav-next">
+                        <span class="nav-direction">Siguiente →</span>
+                        <span class="nav-title">Modelo OSI</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 - Profesor: Lautaro Aragón</p>
+                <p>Curso completo sobre redes de computadoras</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Volver arriba" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

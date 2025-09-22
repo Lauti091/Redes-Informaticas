@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa sobre medios de transmisión en redes - Cables, fibra óptica, wireless, Ethernet y enrutamiento">
+    <meta name="keywords" content="medios transmisión, cables UTP, fibra óptica, wireless, ethernet, enrutamiento">
+    <meta name="author" content="Profesor Lautaro Aragón">
+    <title>Medios de Transmisión - Redes de Datos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+
+    
+<header class="header" role="banner">
+  <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html" class="logo-text">Redes de Datos</a>
+        </div>
+
+        <!-- Añadí id="nav-menu" y class="nav-link" en los <a> -->
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" class="nav-link">Inicio</a></li>
+          <li role="none"><a href="resumen.html" role="menuitem" class="nav-link">Resumen</a></li>
+          <li role="none"><a href="tipos-de-redes.html" role="menuitem" class="nav-link">Tipos de Redes</a></li>
+          <li role="none"><a href="medios-de-transmision.html" role="menuitem" class="nav-link" aria-current="page">Medios de Transmisión</a></li>
+          <li role="none"><a href="segmentacion.html" role="menuitem" class="nav-link">Segmentación</a></li>
+          <li role="none"><a href="ancho-de-banda.html" role="menuitem" class="nav-link">Ancho de Banda</a></li>
+          <li role="none"><a href="modelo-osi.html" role="menuitem" class="nav-link">Modelo OSI</a></li>
+        </ul>
+
+        <!-- Añadí id="hamburger" y las líneas con class="hamburger-line" -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+</header>
+
+
+    <main id="main-content" class="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero hero-transmission" id="introduccion">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" >Medios de Transmisión</h1>
+                    <p class="hero-subtitle">Explora las vías físicas por donde viajan los datos en las redes</p>
+                    <div class="hero-actions">
+                       <button class="cta-button" onclick="scrollToSection('introduccion')" aria-describedby="cta-description">
+                            Explorar Medios
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Transmission Media Introduction -->
+        <section id="transmission-intro" class="section">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">¿Qué son los Medios de Transmisión?</h2>
+                    <p class="lead">Los medios de transmisión son las vías físicas por donde se transportan las tramas, correspondientes a la capa 1 (física) del modelo OSI.</p>
+                    
+                    <div class="media-classification">
+                        <div class="media-types">
+                            <div class="media-type guided">
+                                <div class="media-icon">🔌</div>
+                                <h3>Medios Guiados</h3>
+                                <p>Alámbricos - La señal viaja por un medio físico</p>
+                            </div>
+                            <div class="media-type unguided">
+                                <div class="media-icon">📡</div>
+                                <h3>Medios No Guiados</h3>
+                                <p>Inalámbricos - La señal se propaga por el aire</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guided Media -->
+        <section id="guided-media" class="section bg-light">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">Medios Guiados (Alámbricos)</h2>
+                    
+                    <div class="guided-media-grid">
+                        <!-- UTP Cable -->
+                        <div class="media-card">
+                            <div class="media-header">
+                                <h3>Cable UTP (Par Trenzado)</h3>
+                                <div class="media-icon">🔗</div>
+                            </div>
+                            <div class="media-content">
+                                <h4>Características:</h4>
+                                <ul>
+                                    <li>4 pares de cables trenzados</li>
+                                    <li>Reduce interferencias electromagnéticas</li>
+                                    <li>Conector RJ-45</li>
+                                    <li>Distancia máxima: 100 metros</li>
+                                </ul>
+                                
+                                <div class="utp-categories">
+                                    <h4>Categorías UTP:</h4>
+                                    <div class="category-grid">
+                                        <div class="category-item">
+                                            <span class="cat-name">CAT 5</span>
+                                            <span class="cat-speed">100 Mbps</span>
+                                        </div>
+                                        <div class="category-item">
+                                            <span class="cat-name">CAT 5E</span>
+                                            <span class="cat-speed">1 Gbps</span>
+                                        </div>
+                                        <div class="category-item">
+                                            <span class="cat-name">CAT 6</span>
+                                            <span class="cat-speed">1 Gbps</span>
+                                        </div>
+                                        <div class="category-item">
+                                            <span class="cat-name">CAT 6A</span>
+                                            <span class="cat-speed">10 Gbps</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Coaxial Cable -->
+                        <div class="media-card">
+                            <div class="media-header">
+                                <h3>Cable Coaxial</h3>
+                                <div class="media-icon">📺</div>
+                            </div>
+                            <div class="media-content">
+                                <h4>Características:</h4>
+                                <ul>
+                                    <li>Conductor de cobre central</li>
+                                    <li>Capa aislante y malla de blindaje</li>
+                                    <li>Conectores BNC o F</li>
+                                    <li>Velocidad: 10-100 Mbps</li>
+                                    <li>Distancia máxima: 500 metros</li>
+                                </ul>
+                                
+                                <div class="coax-applications">
+                                    <h4>Aplicaciones:</h4>
+                                    <div class="category-grid">
+                                    <div class="category-item">
+                                    
+                                        <span class="cat-name">Televisión por cable<span>
+                                    </div>
+                                            <div class="category-item">
+                                        
+                                            <span class="cat-name">Redes Ethernet antiguas</span>
+                                    </div>
+                                    <div class="category-item">
+                                    <span class="cat-name">Conexiones de antena</span>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fiber Optic -->
+                        <div class="media-card">
+                            <div class="media-header">
+                                <h3>Fibra Óptica</h3>
+                                <div class="media-icon">💡</div>
+                            </div>
+                            <div class="media-content">
+                                <h4>Características:</h4>
+                                <ul>
+                                    <li>Transmisión por impulsos de luz</li>
+                                    <li>Velocidades muy superiores</li>
+                                    <li>Inmune a interferencias electromagnéticas</li>
+                                    <li>Dos fibras para operación full duplex</li>
+                                </ul>
+                                
+                                <div class="fiber-types">
+                                    <h4>Tipos de Fibra:</h4>
+                                    <div class="fiber-comparison">
+                                        <div class="fiber-type">
+                                            <h5>Monomodo</h5>
+                                            <p>Una sola ruta de luz</p>
+                                            <p><strong>Distancia:</strong> hasta 100 km</p>
+                                        </div>
+                                        <div class="fiber-type">
+                                            <h5>Multimodo</h5>
+                                            <p>Múltiples rutas de luz</p>
+                                            <p><strong>Distancia:</strong> hasta 2 km</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unguided Media -->
+        <section id="unguided-media" class="section">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">Medios No Guiados (Inalámbricos)</h2>
+                    
+                    <div class="wireless-section">
+                        <div class="wifi-standards">
+                            <h3>WiFi (IEEE 802.11)</h3>
+                            <div class="standards-grid">
+                                <div class="standard-card">
+                                    <h4>802.11a</h4>
+                                    <p>5 GHz, 54 Mbps</p>
+                                </div>
+                                <div class="standard-card">
+                                    <h4>802.11b</h4>
+                                    <p>2.4 GHz, 11 Mbps</p>
+                                </div>
+                                <div class="standard-card">
+                                    <h4>802.11g</h4>
+                                    <p>2.4 GHz, 54 Mbps</p>
+                                </div>
+                                <div class="standard-card">
+                                    <h4>802.11n</h4>
+                                    <p>2.4/5 GHz, 100-210 Mbps</p>
+                                </div>
+                                <div class="standard-card">
+                                    <h4>802.11ac</h4>
+                                    <p>5 GHz, hasta 1.3 Gbps</p>
+                                </div>
+                                <div class="standard-card">
+                                    <h4>802.11ax (WiFi 6)</h4>
+                                    <p>2.4/5 GHz, hasta 9.6 Gbps</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="antenna-types">
+                            <h3>Tipos de Antenas</h3>
+                            <div class="antenna-grid">
+                                <div class="antenna-card">
+                                    <div class="antenna-icon">📡</div>
+                                    <h4>Omnidireccional</h4>
+                                    <p>Captan y envían señales en todas direcciones</p>
+                                    <div class="antenna-uses">
+                                        <strong>Usos:</strong> Access Points, routers domésticos
+                                    </div>
+                                </div>
+                                <div class="antenna-card">
+                                    <div class="antenna-icon">📶</div>
+                                    <h4>Direccional</h4>
+                                    <p>Concentran energía hacia un foco específico</p>
+                                    <div class="antenna-uses">
+                                        <strong>Usos:</strong> Enlaces punto a punto, largas distancias
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ethernet Standard -->
+        <section id="ethernet-standard" class="section bg-light">
+            <div class="container">
+                <div class="content-card">
+                    <h2 class="section-title">Estándar Ethernet</h2>
+                    <p class="lead">Ethernet define las características de cableado, señalización y formatos de tramas del nivel físico y de enlace de datos.</p>
+                    
+                    <div class="ethernet-overview">
+                        <div class="ethernet-layers">
+                            <h3>Capas OSI que cubre Ethernet</h3>
+                            <div class="layer-coverage">
+                                <div class="layer-item">
+                                    <span class="layer-number">2</span>
+                                    <span class="layer-name">Enlace de Datos</span>
+                                    <span class="layer-desc">Direccionamiento físico (LLC y MAC)</span>
+                                </div>
+                                <div class="layer-item">
+                                    <span class="layer-number">1</span>
+                                    <span class="layer-name">Física</span>
+                                    <span class="layer-desc">Señalización y transporte por medio físico</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ethernet-speeds">
+                            <h3>Velocidades Ethernet</h3>
+                            <div class="table-responsive">
+                                <table class="speed-table" role="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Estándar</th>
+                                            <th scope="col">Velocidad</th>
+                                            <th scope="col">Medio</th>
+                                            <th scope="col">Distancia</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10BASE-T</td>
+                                            <td>10 Mbps</td>
+                                            <td>UTP Cat 3</td>
+                                            <td>100m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100BASE-TX</td>
+                                            <td>100 Mbps</td>
+                                            <td>UTP Cat 5</td>
+                                            <td>100m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1000BASE-T</td>
+                                            <td>1 Gbps</td>
+                                            <td>UTP Cat 5E/6</td>
+                                            <td>100m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10GBASE-T</td>
+                                            <td>10 Gbps</td>
+                                            <td>UTP Cat 6A</td>
+                                            <td>100m</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation between pages -->
+        <nav class="page-navigation" aria-label="Navegación entre páginas">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="tipos-de-redes.html" class="nav-link nav-prev">
+                        <span class="nav-direction">← Anterior</span>
+                        <span class="nav-title">Tipos de Redes</span>
+                    </a>
+                    <a href="segmentacion.html" class="nav-link nav-next">
+                        <span class="nav-direction">Siguiente →</span>
+                        <span class="nav-title">Segmentación</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 - Profesor: Lautaro Aragón</p>
+                <p>Curso completo sobre redes de computadoras</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Volver arriba" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
